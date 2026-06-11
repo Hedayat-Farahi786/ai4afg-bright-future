@@ -66,24 +66,24 @@ function HomePage() {
   return (
     <SiteLayout>
       {/* HERO */}
-      <section className="py-20 lg:py-28 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-end gap-12 lg:gap-16">
-          <div className="lg:w-7/12">
-            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+      <section className="py-14 sm:py-20 lg:py-28 px-5 sm:px-6">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-end gap-10 lg:gap-16">
+          <div className="lg:w-7/12 w-full min-w-0">
+            <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] text-brand">
               A Nonprofit Building AI Capacity for Afghan Students
             </span>
-            <h1 className="mt-5 font-display font-semibold text-4xl lg:text-7xl leading-[1.02] text-balance max-w-[20ch] mb-8">
+            <h1 className="mt-4 sm:mt-5 font-display font-semibold text-[2rem] leading-[1.08] sm:text-5xl lg:text-7xl sm:leading-[1.02] text-balance max-w-[20ch] mb-6 sm:mb-8">
               Empowering Afghan Youth Through AI Innovation
             </h1>
-            <p className="text-lg sm:text-xl text-navy/70 max-w-[52ch] text-pretty mb-10 leading-relaxed">
+            <p className="text-base sm:text-lg lg:text-xl text-navy/70 max-w-[52ch] text-pretty mb-8 sm:mb-10 leading-relaxed">
               We're training the next generation of Afghan innovators. Real skills, real
               opportunities, real change — built through tailored learning, institutional
               cooperation, and global connections.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3 sm:gap-4">
               <Link
                 to="/get-involved"
-                className="inline-flex items-center gap-2 bg-brand text-white py-3.5 pl-6 pr-3 rounded-full shadow-sm hover:brightness-110 transition"
+                className="inline-flex items-center gap-2 bg-brand text-white py-3 pl-5 pr-2.5 sm:py-3.5 sm:pl-6 sm:pr-3 rounded-full shadow-sm hover:brightness-110 transition"
               >
                 <span className="text-sm font-semibold">Join Our Mission</span>
                 <span className="bg-white/20 rounded-full p-1.5">
@@ -92,7 +92,7 @@ function HomePage() {
               </Link>
               <Link
                 to="/donate"
-                className="inline-flex items-center px-6 py-3.5 rounded-full bg-navy text-white text-sm font-semibold hover:brightness-125 transition"
+                className="inline-flex items-center px-5 py-3 sm:px-6 sm:py-3.5 rounded-full bg-navy text-white text-sm font-semibold hover:brightness-125 transition"
               >
                 Support Our Mission
               </Link>
@@ -112,15 +112,15 @@ function HomePage() {
       </section>
 
       {/* MISSION STATEMENT */}
-      <section className="px-6 py-16 lg:py-24 bg-brand-soft/40 border-y border-navy/10">
+      <section className="px-5 sm:px-6 py-14 sm:py-16 lg:py-24 bg-brand-soft/40 border-y border-navy/10">
         <Reveal className="max-w-5xl mx-auto text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+          <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] text-brand">
             Our Mission
           </span>
-          <p className="mt-6 font-display text-2xl lg:text-4xl leading-tight text-balance text-ink">
+          <p className="mt-5 sm:mt-6 font-display text-xl sm:text-3xl lg:text-4xl leading-snug sm:leading-tight text-balance text-ink">
             Empowering Afghan Youth through AI Learning, Skills Development, and Global Connections.
           </p>
-          <p className="mt-6 text-navy/70 max-w-[60ch] mx-auto text-pretty">
+          <p className="mt-5 sm:mt-6 text-navy/70 max-w-[60ch] mx-auto text-pretty text-sm sm:text-base">
             We build AI capacity for Afghan students through tailored learning programs,
             institutional cooperation, and access to global learning opportunities, enabling their
             meaningful participation in an AI-driven world.
@@ -449,16 +449,16 @@ function HomePage() {
 
 
       {/* SUPPORT OUR MISSION SECTION */}
-      <section className="px-6 py-24 lg:py-28 bg-white shadow-sm border-y border-navy/10">
+      <section className="px-5 sm:px-6 py-16 sm:py-24 lg:py-28 bg-white shadow-sm border-y border-navy/10">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-[60ch] mx-auto mb-16">
-            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+          <div className="text-center max-w-[60ch] mx-auto mb-12 sm:mb-16">
+            <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] text-brand">
               Support Our Mission
             </span>
-            <h2 className="mt-4 font-display font-semibold text-3xl lg:text-5xl text-balance">
+            <h2 className="mt-4 font-display font-semibold text-2xl sm:text-3xl lg:text-5xl leading-tight text-balance">
               Every contribution moves a student forward.
             </h2>
-            <p className="mt-6 text-navy/70 text-pretty leading-relaxed">
+            <p className="mt-5 sm:mt-6 text-sm sm:text-base text-navy/70 text-pretty leading-relaxed">
               Your support means investing in Afghan students who build AI knowledge and practical
               skills, teachers who guide them, and support structures that connect learning to real
               opportunities.
@@ -466,16 +466,16 @@ function HomePage() {
           </div>
 
           {/* Impact amounts */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-12 sm:mb-16">
             {[
               { amount: "€25", desc: "Provides AI learning materials for one student" },
               { amount: "€50", desc: "Funds one week of programming training" },
               { amount: "€100", desc: "Supports mentorship for one month" },
               { amount: "€250", desc: "Sponsors a complete AI literacy course" },
             ].map((item) => (
-              <div key={item.amount} className="p-6 rounded-2xl bg-surface ring-1 ring-navy/10 text-center">
-                <span className="font-display font-semibold text-2xl lg:text-3xl text-brand">{item.amount}</span>
-                <p className="mt-2 text-sm text-navy/70">{item.desc}</p>
+              <div key={item.amount} className="p-4 sm:p-6 rounded-2xl bg-surface ring-1 ring-navy/10 text-center">
+                <span className="font-display font-semibold text-xl sm:text-2xl lg:text-3xl text-brand">{item.amount}</span>
+                <p className="mt-2 text-xs sm:text-sm text-navy/70 leading-snug">{item.desc}</p>
               </div>
             ))}
           </div>
