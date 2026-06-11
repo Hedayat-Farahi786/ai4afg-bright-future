@@ -1,17 +1,22 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { BrandMark } from "@/components/BrandMark";
 
 export function SiteFooter() {
   return (
-    <footer className="pt-24 pb-12 px-6 bg-zinc-50 border-t border-zinc-950/5 mt-32">
+    <footer className="pt-24 pb-12 px-6 bg-navy text-white mt-32">
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 mb-16">
         <div className="md:col-span-2">
-          <div className="flex flex-col mb-6">
-            <span className="font-display font-semibold text-xl tracking-tight">AI4Afghanistan</span>
-            <span className="text-[10px] uppercase tracking-[0.18em] text-zinc-500 mt-1.5">
-              we grow beyond boundaries
+          <div className="flex items-center gap-3 mb-6">
+            <BrandMark className="size-10 shrink-0" />
+            <span className="flex flex-col leading-none">
+              <span className="font-display font-semibold text-lg tracking-tight">AI4AFGHANISTAN</span>
+              <span className="text-[10px] uppercase tracking-[0.18em] text-brand mt-1 font-medium">
+                we grow beyond boundaries
+              </span>
             </span>
           </div>
+
           <p className="text-sm text-zinc-600 max-w-[42ch] leading-relaxed mb-6">
             AI for Afghanistan (AI4Afghanistan) e.V. is a registered non-profit building AI capacity
             for Afghan upper-secondary students through tailored learning, institutional cooperation,
