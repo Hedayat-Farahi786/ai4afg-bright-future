@@ -20,7 +20,7 @@ export const Route = createFileRoute("/donate")({
 });
 
 const ONE_TIME = [10, 25, 50, 100, 250, 500];
-const MONTHLY = [10, 25, 50, 100];
+const MONTHLY = [10, 25, 50, 100, 250, 500];
 
 function DonatePage() {
   const [tab, setTab] = useState<"one" | "monthly">("one");
