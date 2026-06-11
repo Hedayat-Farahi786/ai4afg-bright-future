@@ -1,9 +1,44 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, ArrowRight, Heart, Users, Globe, BookOpen, Lightbulb, Shield } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
+import { Reveal } from "@/components/Reveal";
 import heroImg from "@/assets/hero-students.jpg";
 import trainingImg from "@/assets/program-training.jpg";
 import mentorshipImg from "@/assets/program-mentorship.jpg";
+
+type Person = { name: string; role: string };
+
+const EXECUTIVE: Person[] = [
+  { name: "Ing. Ahmad Siyar Sirat", role: "Chair, Founder" },
+  { name: "Farshad Azimi", role: "Deputy Chair, Founding Member" },
+  { name: "Sayed Amir Ziwari", role: "Treasurer, Founding Member" },
+  { name: "Zuhra Ziwari", role: "Secretary, Founding Member" },
+];
+const SCIENTIFIC: Person[] = [
+  { name: "Masihullah Ahmadi", role: "Scientific Advisor" },
+  { name: "Obaidullah Abdi", role: "Scientific Advisor" },
+  { name: "Ahmad Masih Parshan", role: "Scientific Advisor" },
+  { name: "Hosam Stanikzai", role: "Scientific Advisor" },
+];
+const PROGRAM: Person[] = [
+  { name: "Hedayatullah Farahi", role: "Program Development Lead" },
+  { name: "Mir Mazhar Kawyani", role: "Program Development Lead" },
+  { name: "Muhammad Mustafa Halim", role: "Program Development Lead" },
+  { name: "Waheedullah Hakim", role: "Program Development Lead" },
+  { name: "Matiullah Ahmadi", role: "Program Development Lead" },
+];
+const OPS: Person[] = [
+  { name: "Ehsanullah Farahi", role: "Head of Operations" },
+  { name: "Amanullah Farahi", role: "Head of Partnerships & Resource Mobilization" },
+];
+const DONORS = ["Malala Fund", "Azizi Developments", "GIZ", "The World Bank"];
+const PARTNERS = [
+  "Ministry of Education",
+  "AI.GERMANY",
+  "Bundesministerium für Bildung und Forschung",
+  "Kardan University",
+  "Initiative Transparente Zivilgesellschaft",
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
