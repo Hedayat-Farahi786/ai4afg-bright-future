@@ -34,6 +34,9 @@
 
   --color-brand: var(--brand);
   --color-brand-foreground: var(--brand-foreground);
+  --color-brand-soft: var(--brand-soft);
+  --color-navy: var(--navy);
+  --color-navy-foreground: var(--navy-foreground);
   --color-surface: var(--surface);
   --color-ink: var(--ink);
   --color-subtle: var(--subtle);
@@ -44,14 +47,17 @@
 }
 
 :root {
-  --radius: 0.75rem;
+  --radius: 0.875rem;
 
-  /* Brand */
-  --brand: oklch(0.58 0.17 41);            /* #c2410c burnt orange */
-  --brand-foreground: oklch(0.99 0.005 80);
-  --surface: oklch(0.99 0.004 80);          /* #fcfcfc warm off-white */
-  --ink: oklch(0.21 0.008 270);             /* #18181b zinc-900 */
-  --subtle: oklch(0.97 0.005 80);
+  /* Brand — matches ai4afghanistan.org navy + emerald palette */
+  --brand: oklch(0.62 0.17 152);             /* emerald ~#16a34a */
+  --brand-foreground: oklch(0.99 0.005 150);
+  --brand-soft: oklch(0.94 0.05 152);         /* mint tint */
+  --navy: oklch(0.30 0.05 245);               /* deep navy ~#1d3d5c */
+  --navy-foreground: oklch(0.98 0.005 150);
+  --surface: oklch(0.985 0.012 150);          /* warm mint off-white */
+  --ink: oklch(0.22 0.04 245);                /* navy ink */
+  --subtle: oklch(0.96 0.012 150);
 
   /* shadcn surface tokens mapped to brand palette */
   --background: var(--surface);
@@ -62,16 +68,16 @@
   --popover-foreground: var(--ink);
   --primary: var(--brand);
   --primary-foreground: var(--brand-foreground);
-  --secondary: oklch(0.96 0.005 80);
+  --secondary: var(--subtle);
   --secondary-foreground: var(--ink);
-  --muted: oklch(0.96 0.005 80);
-  --muted-foreground: oklch(0.45 0.01 270);
-  --accent: oklch(0.96 0.005 80);
+  --muted: var(--subtle);
+  --muted-foreground: oklch(0.45 0.03 245);
+  --accent: var(--brand-soft);
   --accent-foreground: var(--ink);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.21 0.008 270 / 8%);
-  --input: oklch(0.21 0.008 270 / 12%);
+  --border: oklch(0.30 0.05 245 / 10%);
+  --input: oklch(0.30 0.05 245 / 14%);
   --ring: var(--brand);
 }
 
