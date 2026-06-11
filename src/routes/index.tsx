@@ -76,7 +76,7 @@ function HomePage() {
       </section>
 
       {/* MISSION STATEMENT */}
-      <section className="px-6 py-16 lg:py-24 bg-zinc-50 border-y border-zinc-950/5">
+      <section className="px-6 py-16 lg:py-24 bg-brand-soft/40 border-y border-zinc-950/5">
         <div className="max-w-5xl mx-auto text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
             Our Mission
@@ -186,7 +186,7 @@ function HomePage() {
       </section>
 
       {/* TRANSPARENCY STRIP */}
-      <section className="border-y border-zinc-950/5 py-10 bg-zinc-50/60">
+      <section className="border-y border-zinc-950/5 py-10 bg-brand-soft/30">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-wrap justify-between items-center gap-x-10 gap-y-4 text-zinc-500">
             <span className="text-xs font-semibold tracking-[0.18em] uppercase">
@@ -284,7 +284,7 @@ function CtaCard({
       className={`p-8 rounded-3xl flex flex-col ${
         highlight
           ? "bg-brand text-white"
-          : "bg-zinc-50 text-ink ring-1 ring-zinc-950/5"
+          : "bg-white text-ink ring-1 ring-zinc-950/5"
       }`}
     >
       <h3 className="font-display font-semibold text-2xl mb-3">{title}</h3>
