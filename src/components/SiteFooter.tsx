@@ -1,20 +1,20 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
-import { BrandMark } from "@/components/BrandMark";
+import logoAsset from "@/assets/ai4a-logo.png.asset.json";
 
 export function SiteFooter() {
   return (
     <footer className="pt-24 pb-12 px-6 bg-navy text-white mt-32">
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 mb-16">
         <div className="md:col-span-2">
-          <div className="flex items-center gap-3 mb-6">
-            <BrandMark className="size-10 shrink-0" />
-            <span className="flex flex-col leading-none">
-              <span className="font-display font-semibold text-lg tracking-tight">AI4AFGHANISTAN</span>
-              <span className="text-[10px] uppercase tracking-[0.18em] text-brand mt-1 font-medium">
-                we grow beyond boundaries
-              </span>
-            </span>
+          <div className="mb-6 bg-white/95 rounded-2xl p-3 inline-block">
+            <img
+              src={logoAsset.url}
+              alt="AI4Afghanistan"
+              width={400}
+              height={122}
+              className="h-12 w-auto object-contain"
+            />
           </div>
 
           <p className="text-sm text-white/70 max-w-[42ch] leading-relaxed mb-6">
