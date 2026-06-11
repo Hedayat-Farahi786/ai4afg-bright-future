@@ -112,7 +112,7 @@ function HomePage() {
 
       {/* MISSION STATEMENT */}
       <section className="px-6 py-16 lg:py-24 bg-brand-soft/40 border-y border-navy/10">
-        <div className="max-w-5xl mx-auto text-center">
+        <Reveal className="max-w-5xl mx-auto text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
             Our Mission
           </span>
@@ -124,7 +124,7 @@ function HomePage() {
             institutional cooperation, and access to global learning opportunities, enabling their
             meaningful participation in an AI-driven world.
           </p>
-        </div>
+        </Reveal>
       </section>
 
       {/* IMPACT STATS */}
