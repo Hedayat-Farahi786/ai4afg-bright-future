@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/components/SiteLayout";
+import { PartnerLogo } from "@/components/PartnerLogo";
 
 export const Route = createFileRoute("/about/partners")({
   head: () => ({
@@ -41,12 +42,7 @@ function PartnersPage() {
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {PARTNERS.map((p) => (
-          <div
-            key={p}
-            className="aspect-[3/2] bg-white ring-1 ring-navy/10 rounded-2xl grid place-items-center text-center px-6"
-          >
-            <div className="font-display font-semibold text-lg text-navy/80">{p}</div>
-          </div>
+          <PartnerLogo key={p} name={p} />
         ))}
       </div>
     </Section>

@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, ArrowRight, Heart, Users, Globe, BookOpen, Lightbulb, Shield } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { Reveal } from "@/components/Reveal";
+import { PartnerLogo } from "@/components/PartnerLogo";
 import heroImg from "@/assets/hero-students.jpg";
 import trainingImg from "@/assets/program-training.jpg";
 import mentorshipImg from "@/assets/program-mentorship.jpg";
@@ -419,12 +420,7 @@ function HomePage() {
             </Reveal>
             <Reveal delay={80} className="mt-8 grid sm:grid-cols-2 gap-4">
               {DONORS.map((d) => (
-                <div
-                  key={d}
-                  className="aspect-[3/2] bg-white ring-1 ring-navy/10 rounded-2xl grid place-items-center text-center px-6 transition hover:ring-brand/40 hover:-translate-y-0.5"
-                >
-                  <div className="font-display font-semibold text-base text-navy/80">{d}</div>
-                </div>
+                <PartnerLogo key={d} name={d} />
               ))}
             </Reveal>
           </div>
@@ -443,12 +439,7 @@ function HomePage() {
             </Reveal>
             <Reveal delay={80} className="mt-8 grid sm:grid-cols-2 gap-4">
               {PARTNERS.map((p) => (
-                <div
-                  key={p}
-                  className="aspect-[3/2] bg-white ring-1 ring-navy/10 rounded-2xl grid place-items-center text-center px-5 transition hover:ring-brand/40 hover:-translate-y-0.5"
-                >
-                  <div className="font-display font-semibold text-base text-navy/80">{p}</div>
-                </div>
+                <PartnerLogo key={p} name={p} />
               ))}
             </Reveal>
           </div>
