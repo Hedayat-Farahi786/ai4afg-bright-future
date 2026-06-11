@@ -15,7 +15,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-surface/85 backdrop-blur-md border-b border-zinc-950/5">
+    <header className="sticky top-0 z-50 bg-surface/85 backdrop-blur-md border-b border-navy/10">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3 leading-none" onClick={() => setOpen(false)}>
           <BrandMark className="size-9 shrink-0" />
@@ -33,7 +33,7 @@ export function SiteHeader() {
             <Link
               key={item.to}
               to={item.to}
-              className="text-sm font-medium text-zinc-600 hover:text-ink transition-colors"
+              className="text-sm font-medium text-navy/70 hover:text-ink transition-colors"
               activeProps={{ className: "text-ink" }}
             >
               {item.label}
@@ -44,7 +44,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <Link
             to="/partner-with-us"
-            className="hidden md:inline-flex text-sm font-medium px-4 py-2 text-zinc-700 hover:text-ink"
+            className="hidden md:inline-flex text-sm font-medium px-4 py-2 text-navy/70 hover:text-ink"
           >
             Partner With Us
           </Link>
@@ -66,13 +66,13 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t border-zinc-950/5 bg-surface">
+        <div className="lg:hidden border-t border-navy/10 bg-surface">
           <nav className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-1">
             {NAV.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
-                className="py-2 text-base font-medium text-zinc-700"
+                className="py-2 text-base font-medium text-navy/70"
                 onClick={() => setOpen(false)}
               >
                 {item.label}
@@ -80,7 +80,7 @@ export function SiteHeader() {
             ))}
             <Link
               to="/partner-with-us"
-              className="py-2 text-base font-medium text-zinc-700"
+              className="py-2 text-base font-medium text-navy/70"
               onClick={() => setOpen(false)}
             >
               Partner With Us

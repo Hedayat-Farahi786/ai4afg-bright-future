@@ -39,7 +39,7 @@ function WorkPage() {
               Grades 10–12, the right time to start.
             </h2>
           </div>
-          <div className="text-zinc-700 leading-relaxed space-y-5 max-w-[68ch]">
+          <div className="text-navy/80 leading-relaxed space-y-5 max-w-[68ch]">
             <p>
               We build AI capacity for Afghan students, with a focus on upper secondary schools
               (grades 10–12). We do this in cooperation with public schools, education authorities,
@@ -59,7 +59,7 @@ function WorkPage() {
         </div>
       </Section>
 
-      <Section className="bg-zinc-50 border-y border-zinc-950/5">
+      <Section className="bg-white shadow-sm border-y border-navy/10">
         <div id="programs" className="scroll-mt-24">
           <div className="max-w-2xl mb-12">
             <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
@@ -70,7 +70,7 @@ function WorkPage() {
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
-            <article className="bg-white ring-1 ring-zinc-950/5 rounded-3xl p-8">
+            <article className="bg-white ring-1 ring-navy/10 rounded-3xl p-8">
               <img
                 src={trainingImg}
                 alt="Notebook with Python notes next to a tablet showing code"
@@ -82,7 +82,7 @@ function WorkPage() {
               <h3 className="font-display font-semibold text-2xl mb-3">
                 Training & Capacity-Building
               </h3>
-              <p className="text-zinc-700 leading-relaxed">
+              <p className="text-navy/80 leading-relaxed">
                 The foundation of our work. We help Afghan students take structured first steps into
                 AI by building AI literacy and foundational skills through clear learning sequences
                 and introductory hands-on exercises. In parallel, we provide train-the-trainer
@@ -92,7 +92,7 @@ function WorkPage() {
                 mentorship and learning networks.
               </p>
             </article>
-            <article className="bg-white ring-1 ring-zinc-950/5 rounded-3xl p-8">
+            <article className="bg-white ring-1 ring-navy/10 rounded-3xl p-8">
               <img
                 src={mentorshipImg}
                 alt="Collaborative workspace with two laptops"
@@ -104,7 +104,7 @@ function WorkPage() {
               <h3 className="font-display font-semibold text-2xl mb-3">
                 Applied AI Projects & Innovation
               </h3>
-              <p className="text-zinc-700 leading-relaxed">
+              <p className="text-navy/80 leading-relaxed">
                 Early hands-on applied AI learning through guided student-led projects and
                 pilot-based activities. The program enables Afghan students to develop applied AI
                 skills with mentorship and review support, prioritizing locally relevant use cases
@@ -127,7 +127,7 @@ function WorkPage() {
               An inclusive, sustainable pipeline for pre-university AI education.
             </h2>
           </div>
-          <p className="text-zinc-700 leading-relaxed max-w-[68ch]">
+          <p className="text-navy/80 leading-relaxed max-w-[68ch]">
             To build an inclusive and sustainable pipeline for pre-university AI education in
             Afghanistan, enabling upper secondary school students to gain foundational AI knowledge,
             develop practical skills, and use AI responsibly — strengthening their readiness for
@@ -136,7 +136,7 @@ function WorkPage() {
         </div>
       </Section>
 
-      <Section className="bg-zinc-50 border-y border-zinc-950/5">
+      <Section className="bg-white shadow-sm border-y border-navy/10">
         <div id="approach" className="scroll-mt-24">
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
             Our Delivery Approach
@@ -162,12 +162,12 @@ function WorkPage() {
                 body: "Gradual expansion to additional schools and, as conditions and implementation capacity allow, to other provinces.",
               },
             ].map((p) => (
-              <div key={p.phase} className="bg-white p-8 rounded-3xl ring-1 ring-zinc-950/5">
+              <div key={p.phase} className="bg-white p-8 rounded-3xl ring-1 ring-navy/10">
                 <div className="text-xs font-semibold uppercase tracking-widest text-brand">
                   {p.phase}
                 </div>
                 <h3 className="mt-3 font-display font-semibold text-xl">{p.title}</h3>
-                <p className="mt-3 text-zinc-600 leading-relaxed">{p.body}</p>
+                <p className="mt-3 text-navy/70 leading-relaxed">{p.body}</p>
               </div>
             ))}
           </div>
@@ -184,7 +184,7 @@ function WorkPage() {
               Currently in the foundational phase.
             </h2>
           </div>
-          <p className="text-zinc-700 leading-relaxed max-w-[68ch]">
+          <p className="text-navy/80 leading-relaxed max-w-[68ch]">
             AI4Afghanistan is currently in the foundational phase, preparing for pilot
             implementation in Afghanistan. We do this through early-stage, initiative-based work
             primarily coordinated from Germany, focusing on partnership building, program and

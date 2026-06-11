@@ -27,7 +27,7 @@ function DonorsPage() {
         <h2 className="mt-3 font-display font-semibold text-3xl lg:text-4xl text-balance">
           Made possible by the generosity of our supporters.
         </h2>
-        <p className="mt-4 text-zinc-600 leading-relaxed">
+        <p className="mt-4 text-navy/70 leading-relaxed">
           We are profoundly grateful to the organizations and individuals who fund the work of
           building AI capacity for Afghan students. Donor relationships listed below are example
           placeholders — to be confirmed as partnerships are formalized.
@@ -37,13 +37,13 @@ function DonorsPage() {
         {DONORS.map((d) => (
           <div
             key={d}
-            className="aspect-[3/2] bg-white ring-1 ring-zinc-950/5 rounded-2xl grid place-items-center text-center px-6"
+            className="aspect-[3/2] bg-white ring-1 ring-navy/10 rounded-2xl grid place-items-center text-center px-6"
           >
-            <div className="font-display font-semibold text-lg text-zinc-700">{d}</div>
+            <div className="font-display font-semibold text-lg text-navy/80">{d}</div>
           </div>
         ))}
       </div>
-      <p className="mt-12 text-sm text-zinc-500">
+      <p className="mt-12 text-sm text-navy/60">
         Interested in supporting our work?{" "}
         <a href="/donate" className="text-brand underline underline-offset-4">
           Make a donation

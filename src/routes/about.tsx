@@ -33,7 +33,7 @@ function AboutLayout() {
   const { pathname } = useLocation();
   return (
     <SiteLayout>
-      <div className="px-6 pt-16 lg:pt-24 pb-8 border-b border-zinc-950/5 bg-zinc-50/50">
+      <div className="px-6 pt-16 lg:pt-24 pb-8 border-b border-navy/10 bg-brand-soft/30">
         <div className="max-w-7xl mx-auto">
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
             About AI4Afghanistan
@@ -51,7 +51,7 @@ function AboutLayout() {
                   className={`text-sm font-medium px-4 py-2 rounded-full transition ${
                     active
                       ? "bg-ink text-white"
-                      : "bg-white ring-1 ring-zinc-950/10 text-zinc-700 hover:bg-zinc-100"
+                      : "bg-white ring-1 ring-navy/10 text-navy/70 hover:bg-brand-soft/40"
                   }`}
                 >
                   {s.label}

@@ -29,7 +29,7 @@ function AboutIndex() {
             </h2>
           </aside>
           <Prose>
-            <p className="italic text-zinc-600">
+            <p className="italic text-navy/70">
               AI4Afghanistan began as a small effort to understand how fast AI was advancing, and
               quickly became a long-term commitment to help close a widening AI capacity gap for
               Afghan youth.
@@ -91,7 +91,7 @@ function AboutIndex() {
         </div>
       </Section>
 
-      <Section className="bg-zinc-50 border-y border-zinc-950/5">
+      <Section className="bg-white shadow-sm border-y border-navy/10">
         <div className="grid md:grid-cols-3 gap-12">
           <div>
             <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
@@ -117,7 +117,7 @@ function AboutIndex() {
             <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
               Our Values
             </span>
-            <ul className="mt-4 space-y-4 text-zinc-700">
+            <ul className="mt-4 space-y-4 text-navy/80">
               <li>
                 <strong className="text-ink">Responsible AI</strong> — We promote safe, transparent,
                 and inclusive use of AI in Afghanistan.

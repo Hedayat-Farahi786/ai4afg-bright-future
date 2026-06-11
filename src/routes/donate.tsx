@@ -39,12 +39,12 @@ function DonatePage() {
       <Section>
         <div className="grid lg:grid-cols-[3fr_2fr] gap-12 lg:gap-20">
           {/* Donation selector */}
-          <div className="bg-zinc-50 rounded-3xl p-8 lg:p-10 ring-1 ring-zinc-950/5">
-            <div className="inline-flex p-1 bg-white rounded-full ring-1 ring-zinc-950/5 mb-8">
+          <div className="bg-white shadow-sm rounded-3xl p-8 lg:p-10 ring-1 ring-navy/10">
+            <div className="inline-flex p-1 bg-white rounded-full ring-1 ring-navy/10 mb-8">
               <button
                 onClick={() => setTab("one")}
                 className={`px-5 py-2 text-sm font-medium rounded-full transition ${
-                  tab === "one" ? "bg-ink text-white" : "text-zinc-600"
+                  tab === "one" ? "bg-navy text-white" : "text-navy/70"
                 }`}
               >
                 One-time
@@ -52,7 +52,7 @@ function DonatePage() {
               <button
                 onClick={() => setTab("monthly")}
                 className={`px-5 py-2 text-sm font-medium rounded-full transition ${
-                  tab === "monthly" ? "bg-ink text-white" : "text-zinc-600"
+                  tab === "monthly" ? "bg-navy text-white" : "text-navy/70"
                 }`}
               >
                 Monthly
@@ -70,7 +70,7 @@ function DonatePage() {
                   className={`py-4 rounded-2xl text-lg font-display font-semibold transition ${
                     amount === a && !custom
                       ? "bg-brand text-white"
-                      : "bg-white ring-1 ring-zinc-950/10 text-ink hover:bg-zinc-100"
+                      : "bg-white ring-1 ring-zinc-950/10 text-ink hover:bg-brand-soft/50"
                   }`}
                 >
                   €{a}
@@ -79,9 +79,9 @@ function DonatePage() {
             </div>
 
             <label className="block">
-              <span className="text-sm text-zinc-600">Or enter custom amount</span>
+              <span className="text-sm text-navy/70">Or enter custom amount</span>
               <div className="mt-2 flex items-center gap-2 bg-white rounded-2xl ring-1 ring-zinc-950/10 px-4">
-                <span className="text-zinc-500">€</span>
+                <span className="text-navy/60">€</span>
                 <input
                   type="number"
                   min={1}
@@ -103,7 +103,7 @@ function DonatePage() {
               Donate €{custom || amount || 0}
               {tab === "monthly" && " / month"} via bank transfer
             </button>
-            <p className="mt-3 text-xs text-zinc-500 text-center">
+            <p className="mt-3 text-xs text-navy/60 text-center">
               Online payment via Stripe coming soon — for now please use the bank details on the
               right.
             </p>
@@ -114,7 +114,7 @@ function DonatePage() {
         </div>
       </Section>
 
-      <Section className="bg-zinc-50 border-y border-zinc-950/5">
+      <Section className="bg-white shadow-sm border-y border-navy/10">
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
@@ -123,7 +123,7 @@ function DonatePage() {
             <h2 className="mt-3 font-display font-semibold text-3xl text-balance">
               Every contribution moves a student forward.
             </h2>
-            <ul className="mt-6 space-y-3 text-zinc-700">
+            <ul className="mt-6 space-y-3 text-navy/80">
               <li><strong>€25</strong> — provides AI learning materials for one student</li>
               <li><strong>€50</strong> — funds one week of programming training</li>
               <li><strong>€100</strong> — supports mentorship for one month</li>
@@ -137,7 +137,7 @@ function DonatePage() {
             <h2 className="mt-3 font-display font-semibold text-3xl text-balance">
               Real programs, real people, real impact.
             </h2>
-            <ul className="mt-6 space-y-3 text-zinc-700 list-disc pl-5">
+            <ul className="mt-6 space-y-3 text-navy/80 list-disc pl-5">
               <li>
                 Delivery of tailored AI learning programs for Afghan students, focused on practical
                 skills and responsible AI use.
@@ -168,18 +168,18 @@ function BankDetails() {
     setTimeout(() => setCopied(null), 1500);
   };
   return (
-    <div className="bg-ink text-white p-8 lg:p-10 rounded-3xl">
+    <div className="bg-navy text-white p-8 lg:p-10 rounded-3xl">
       <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
         Spendenkonto
       </span>
       <h2 className="mt-3 font-display font-semibold text-2xl">Bank transfer details</h2>
       <dl className="mt-6 space-y-5 text-sm">
         <div>
-          <dt className="text-zinc-400">Recipient</dt>
+          <dt className="text-white/60">Recipient</dt>
           <dd className="mt-1 font-medium">AI for Afghanistan (AI4Afghanistan) e.V.</dd>
         </div>
         <div>
-          <dt className="text-zinc-400">IBAN</dt>
+          <dt className="text-white/60">IBAN</dt>
           <dd className="mt-1 flex items-center gap-3">
             <span className="font-mono">{iban}</span>
             <button
@@ -192,15 +192,15 @@ function BankDetails() {
           </dd>
         </div>
         <div>
-          <dt className="text-zinc-400">BIC / SWIFT</dt>
+          <dt className="text-white/60">BIC / SWIFT</dt>
           <dd className="mt-1 font-mono">XXXXXXXXXXX</dd>
         </div>
         <div>
-          <dt className="text-zinc-400">Reference (Verwendungszweck)</dt>
+          <dt className="text-white/60">Reference (Verwendungszweck)</dt>
           <dd className="mt-1">Donation – Your Full Name</dd>
         </div>
       </dl>
-      <p className="mt-6 text-xs text-zinc-400 leading-relaxed">
+      <p className="mt-6 text-xs text-white/60 leading-relaxed">
         Donation receipts are currently issued manually. Email{" "}
         <a href="mailto:info@ai4afghanistan.org" className="underline">
           info@ai4afghanistan.org

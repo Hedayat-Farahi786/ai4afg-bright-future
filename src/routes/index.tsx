@@ -39,7 +39,7 @@ function HomePage() {
             <h1 className="mt-5 font-display font-semibold text-4xl lg:text-7xl leading-[1.02] text-balance max-w-[20ch] mb-8">
               Empowering Afghan Youth Through AI Innovation
             </h1>
-            <p className="text-lg sm:text-xl text-zinc-600 max-w-[52ch] text-pretty mb-10 leading-relaxed">
+            <p className="text-lg sm:text-xl text-navy/70 max-w-[52ch] text-pretty mb-10 leading-relaxed">
               We're training the next generation of Afghan innovators. Real skills, real
               opportunities, real change — built through tailored learning, institutional
               cooperation, and global connections.
@@ -76,7 +76,7 @@ function HomePage() {
       </section>
 
       {/* MISSION STATEMENT */}
-      <section className="px-6 py-16 lg:py-24 bg-brand-soft/40 border-y border-zinc-950/5">
+      <section className="px-6 py-16 lg:py-24 bg-brand-soft/40 border-y border-navy/10">
         <div className="max-w-5xl mx-auto text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
             Our Mission
@@ -84,7 +84,7 @@ function HomePage() {
           <p className="mt-6 font-display text-2xl lg:text-4xl leading-tight text-balance text-ink">
             Empowering Afghan Youth through AI Learning, Skills Development, and Global Connections.
           </p>
-          <p className="mt-6 text-zinc-600 max-w-[60ch] mx-auto text-pretty">
+          <p className="mt-6 text-navy/70 max-w-[60ch] mx-auto text-pretty">
             We build AI capacity for Afghan students through tailored learning programs,
             institutional cooperation, and access to global learning opportunities, enabling their
             meaningful participation in an AI-driven world.
@@ -117,7 +117,7 @@ function HomePage() {
                 {pillar.eyebrow}
               </span>
               <h3 className="font-display font-semibold text-2xl text-balance">{pillar.title}</h3>
-              <p className="text-zinc-600 text-pretty max-w-[40ch]">{pillar.body}</p>
+              <p className="text-navy/70 text-pretty max-w-[40ch]">{pillar.body}</p>
             </div>
           ))}
         </div>
@@ -126,22 +126,22 @@ function HomePage() {
       {/* DARK MISSION BLOCK */}
       <section className="py-16 lg:py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-ink text-white p-12 lg:p-20 rounded-3xl overflow-hidden relative">
+          <div className="bg-navy text-white p-12 lg:p-20 rounded-3xl overflow-hidden relative">
             <h2 className="font-display font-semibold text-3xl lg:text-5xl leading-tight text-balance max-w-[26ch]">
               Building a future where every Afghan student can learn and apply AI responsibly.
             </h2>
-            <p className="mt-8 text-zinc-300 max-w-[55ch] text-pretty">
+            <p className="mt-8 text-white/75 max-w-[55ch] text-pretty">
               A future defined by fair access to AI learning, inclusion, and meaningful contribution
               to Afghanistan's digital economy.
             </p>
             <div className="mt-12 flex flex-wrap items-center gap-4">
               <Link
                 to="/about"
-                className="inline-flex items-center gap-2 bg-white text-ink text-sm font-medium py-2.5 px-5 rounded-full hover:bg-zinc-100 transition"
+                className="inline-flex items-center gap-2 bg-white text-ink text-sm font-medium py-2.5 px-5 rounded-full hover:bg-brand-soft/50 transition"
               >
                 Our founding story <ArrowRight className="size-4" />
               </Link>
-              <div className="text-sm text-zinc-400">
+              <div className="text-sm text-white/60">
                 Registered non-profit e.V. — Hamburg, Germany
               </div>
             </div>
@@ -186,9 +186,9 @@ function HomePage() {
       </section>
 
       {/* TRANSPARENCY STRIP */}
-      <section className="border-y border-zinc-950/5 py-10 bg-brand-soft/30">
+      <section className="border-y border-navy/10 py-10 bg-brand-soft/30">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-wrap justify-between items-center gap-x-10 gap-y-4 text-zinc-500">
+          <div className="flex flex-wrap justify-between items-center gap-x-10 gap-y-4 text-navy/60">
             <span className="text-xs font-semibold tracking-[0.18em] uppercase">
               Registered e.V. — Hamburg
             </span>
@@ -245,7 +245,7 @@ function ProgramCard({
   body: string;
 }) {
   return (
-    <div className="group bg-surface ring-1 ring-zinc-950/5 p-6 rounded-3xl transition-shadow hover:shadow-xl hover:shadow-zinc-950/5">
+    <div className="group bg-surface ring-1 ring-navy/10 p-6 rounded-3xl transition-shadow hover:shadow-xl hover:shadow-zinc-950/5">
       <img
         src={img}
         alt={alt}
@@ -255,7 +255,7 @@ function ProgramCard({
         className="w-full aspect-video object-cover rounded-2xl mb-6 ring-1 ring-black/5"
       />
       <h3 className="text-xl font-display font-semibold mb-3">{title}</h3>
-      <p className="text-zinc-600 text-pretty mb-6">{body}</p>
+      <p className="text-navy/70 text-pretty mb-6">{body}</p>
       <Link
         to="/work"
         className="text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all"
@@ -284,11 +284,11 @@ function CtaCard({
       className={`p-8 rounded-3xl flex flex-col ${
         highlight
           ? "bg-brand text-white"
-          : "bg-white text-ink ring-1 ring-zinc-950/5"
+          : "bg-white text-ink ring-1 ring-navy/10"
       }`}
     >
       <h3 className="font-display font-semibold text-2xl mb-3">{title}</h3>
-      <p className={`mb-8 text-pretty ${highlight ? "text-white/80" : "text-zinc-600"}`}>
+      <p className={`mb-8 text-pretty ${highlight ? "text-white/80" : "text-navy/70"}`}>
         {body}
       </p>
       <Link

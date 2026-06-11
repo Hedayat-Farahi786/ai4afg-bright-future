@@ -57,7 +57,7 @@ function TeamGroup({
   people: Person[];
 }) {
   return (
-    <div className="grid lg:grid-cols-[1fr_2fr] gap-10 lg:gap-16 py-12 lg:py-16 border-t border-zinc-950/5 first:border-t-0">
+    <div className="grid lg:grid-cols-[1fr_2fr] gap-10 lg:gap-16 py-12 lg:py-16 border-t border-navy/10 first:border-t-0">
       <div>
         <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
           {eyebrow}
@@ -65,15 +65,15 @@ function TeamGroup({
         <h2 className="mt-3 font-display font-semibold text-2xl lg:text-3xl text-balance">
           {title}
         </h2>
-        <p className="mt-4 text-zinc-600 max-w-[42ch] leading-relaxed">{description}</p>
+        <p className="mt-4 text-navy/70 max-w-[42ch] leading-relaxed">{description}</p>
       </div>
       <div className="grid sm:grid-cols-2 gap-4">
         {people.map((p) => (
           <div
             key={p.name}
-            className="bg-white ring-1 ring-zinc-950/5 rounded-2xl p-5 flex items-center gap-4"
+            className="bg-white ring-1 ring-navy/10 rounded-2xl p-5 flex items-center gap-4"
           >
-            <div className="size-12 shrink-0 rounded-full bg-brand/10 grid place-items-center text-brand font-display font-semibold">
+            <div className="size-12 shrink-0 rounded-full bg-brand-soft/60 grid place-items-center text-brand font-display font-semibold">
               {p.name
                 .split(" ")
                 .map((w) => w[0])
@@ -83,7 +83,7 @@ function TeamGroup({
             </div>
             <div className="min-w-0">
               <div className="font-medium text-ink truncate">{p.name}</div>
-              <div className="text-sm text-zinc-500 leading-snug">{p.role}</div>
+              <div className="text-sm text-navy/60 leading-snug">{p.role}</div>
             </div>
           </div>
         ))}

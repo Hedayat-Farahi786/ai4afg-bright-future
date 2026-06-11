@@ -39,7 +39,7 @@ function PartnerPage() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           <div>
             <h2 className="font-display font-semibold text-2xl mb-4">Who we partner with</h2>
-            <p className="text-zinc-700 leading-relaxed mb-6">
+            <p className="text-navy/80 leading-relaxed mb-6">
               Education bodies, public schools, education and capacity-building focused NGOs,
               international development agencies, foundations and funding partners, and civil
               society organizations — including those focused on girls' and women's empowerment. We
@@ -47,7 +47,7 @@ function PartnerPage() {
               education and innovation.
             </p>
             <h3 className="font-display font-semibold text-xl mb-3 mt-8">Partnership Impact</h3>
-            <p className="text-zinc-700 leading-relaxed">
+            <p className="text-navy/80 leading-relaxed">
               Your partnership helps build the foundations that enable Afghanistan to adapt to AI
               gradually and responsibly. By "foundations," we mean Afghan students who build AI
               knowledge and practical skills, teachers who guide them, and support structures that
@@ -57,7 +57,7 @@ function PartnerPage() {
 
           <form
             onSubmit={handleSubmit}
-            className="bg-zinc-50 rounded-3xl p-8 lg:p-10 ring-1 ring-zinc-950/5"
+            className="bg-white shadow-sm rounded-3xl p-8 lg:p-10 ring-1 ring-navy/10"
           >
             <h2 className="font-display font-semibold text-2xl mb-6">Partnership Inquiry</h2>
             <div className="grid gap-5">
@@ -118,11 +118,11 @@ function Field({
 }) {
   return (
     <label className="flex flex-col gap-1.5">
-      <span className="text-sm font-medium text-zinc-800">
+      <span className="text-sm font-medium text-ink">
         {label} {required && <span className="text-brand">*</span>}
       </span>
       {children}
-      {hint && <span className="text-xs text-zinc-500">{hint}</span>}
+      {hint && <span className="text-xs text-navy/60">{hint}</span>}
     </label>
   );
 }

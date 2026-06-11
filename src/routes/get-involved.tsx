@@ -43,7 +43,7 @@ function GetInvolvedPage() {
         <div className="grid lg:grid-cols-3 gap-12 mb-16">
           <div>
             <h2 className="font-display font-semibold text-2xl mb-3">Why Volunteer</h2>
-            <p className="text-zinc-600 leading-relaxed">
+            <p className="text-navy/70 leading-relaxed">
               Your time and expertise can make a real difference, helping us reduce a widening AI
               capacity gap for Afghan students and enable their meaningful participation in an
               AI-driven world.
@@ -51,7 +51,7 @@ function GetInvolvedPage() {
           </div>
           <div>
             <h2 className="font-display font-semibold text-2xl mb-3">How You Can Contribute</h2>
-            <p className="text-zinc-600 leading-relaxed">
+            <p className="text-navy/70 leading-relaxed">
               From advisory support and program development to operations and resource
               mobilization. Whether you bring deep expertise or simply the motivation to help, we
               can find the right fit.
@@ -59,7 +59,7 @@ function GetInvolvedPage() {
           </div>
           <div>
             <h2 className="font-display font-semibold text-2xl mb-3">Membership Fee</h2>
-            <p className="text-zinc-600 leading-relaxed">
+            <p className="text-navy/70 leading-relaxed">
               Volunteer members pay a fee set by our General Assembly. The minimum is €12 per
               month. Members who can do so are welcome to contribute more on a voluntary basis.
             </p>
@@ -254,11 +254,11 @@ function Field({
 }) {
   return (
     <label className={`flex flex-col gap-1.5 ${full ? "md:col-span-2" : ""}`}>
-      <span className="text-sm font-medium text-zinc-800">
+      <span className="text-sm font-medium text-ink">
         {label} {required && <span className="text-brand">*</span>}
       </span>
       {children}
-      {hint && <span className="text-xs text-zinc-500">{hint}</span>}
+      {hint && <span className="text-xs text-navy/60">{hint}</span>}
     </label>
   );
 }
