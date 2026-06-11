@@ -46,21 +46,22 @@ function HomePage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/donate"
-                className="flex items-center gap-2 bg-brand text-white py-3 pr-6 pl-3 rounded-full ring-1 ring-brand cursor-pointer hover:brightness-110 transition"
+                to="/get-involved"
+                className="inline-flex items-center gap-2 bg-brand text-white py-3.5 pl-6 pr-3 rounded-full shadow-sm hover:brightness-110 transition"
               >
-                <span className="bg-white/20 rounded-full p-1">
+                <span className="text-sm font-semibold">Join Our Mission</span>
+                <span className="bg-white/20 rounded-full p-1.5">
                   <ArrowUpRight className="size-4" />
                 </span>
-                <span className="text-sm font-medium">Support Our Mission</span>
               </Link>
               <Link
-                to="/get-involved"
-                className="px-6 py-3 rounded-full ring-1 ring-zinc-300 text-sm font-medium text-zinc-700 hover:bg-zinc-50 transition-colors"
+                to="/donate"
+                className="inline-flex items-center px-6 py-3.5 rounded-full bg-navy text-white text-sm font-semibold hover:brightness-125 transition"
               >
-                Join Our Mission
+                Support Our Mission
               </Link>
             </div>
+
           </div>
           <div className="lg:w-5/12 w-full">
             <img
