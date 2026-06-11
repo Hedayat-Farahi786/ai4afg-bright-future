@@ -274,7 +274,7 @@ function CtaCard({
 }: {
   title: string;
   body: string;
-  to: string;
+  to: "/get-involved" | "/donate" | "/partner-with-us";
   cta: string;
   highlight?: boolean;
 }) {
@@ -291,7 +291,6 @@ function CtaCard({
         {body}
       </p>
       <Link
-        // @ts-expect-error simple string route
         to={to}
         className={`mt-auto inline-flex items-center gap-1.5 text-sm font-medium ${
           highlight ? "text-white" : "text-brand"
