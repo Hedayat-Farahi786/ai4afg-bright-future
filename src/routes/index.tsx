@@ -135,11 +135,11 @@ function HomePage() {
             { n: "100%", l: "Volunteer-led" },
             { n: "e.V.", l: "Registered nonprofit · Hamburg" },
             { n: "Global", l: "Mentor network" },
-          ].map((s) => (
-            <div key={s.l} className="flex flex-col gap-2">
+          ].map((s, i) => (
+            <Reveal key={s.l} delay={i * 80} className="flex flex-col gap-2">
               <span className="font-display font-semibold text-3xl lg:text-5xl text-ink">{s.n}</span>
               <span className="text-xs uppercase tracking-[0.16em] text-navy/60 font-medium">{s.l}</span>
-            </div>
+            </Reveal>
           ))}
         </div>
       </section>
