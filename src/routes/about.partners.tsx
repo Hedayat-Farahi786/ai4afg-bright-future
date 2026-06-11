@@ -33,7 +33,7 @@ function PartnersPage() {
         <h2 className="mt-3 font-display font-semibold text-3xl lg:text-4xl text-balance">
           Building together with education and development partners.
         </h2>
-        <p className="mt-4 text-zinc-600 leading-relaxed">
+        <p className="mt-4 text-navy/70 leading-relaxed">
           We work with education bodies, public schools, NGOs, international development agencies,
           foundations, and civil society organizations. Partnerships listed below are placeholders —
           to be confirmed as cooperation is formalized.
@@ -43,9 +43,9 @@ function PartnersPage() {
         {PARTNERS.map((p) => (
           <div
             key={p}
-            className="aspect-[3/2] bg-white ring-1 ring-zinc-950/5 rounded-2xl grid place-items-center text-center px-6"
+            className="aspect-[3/2] bg-white ring-1 ring-navy/10 rounded-2xl grid place-items-center text-center px-6"
           >
-            <div className="font-display font-semibold text-lg text-zinc-700">{p}</div>
+            <div className="font-display font-semibold text-lg text-navy/80">{p}</div>
           </div>
         ))}
       </div>

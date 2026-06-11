@@ -19,8 +19,8 @@ export const Route = createFileRoute("/about/transparency")({
 
 function Row({ label, value }: { label: string; value: React.ReactNode }) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-2 sm:gap-6 py-4 border-b border-zinc-950/5">
-      <dt className="text-sm font-semibold uppercase tracking-wider text-zinc-500">{label}</dt>
+    <div className="grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-2 sm:gap-6 py-4 border-b border-navy/10">
+      <dt className="text-sm font-semibold uppercase tracking-wider text-navy/60">{label}</dt>
       <dd className="text-ink">{value}</dd>
     </div>
   );
@@ -37,7 +37,7 @@ function TransparencyPage() {
           <h2 className="mt-3 font-display font-semibold text-3xl text-balance">
             Our commitment to transparency.
           </h2>
-          <p className="mt-4 text-zinc-600 leading-relaxed">
+          <p className="mt-4 text-navy/70 leading-relaxed">
             AI4Afghanistan believes that transparency and accountability are essential to building
             trust. We openly share key information about our legal status, organizational structure,
             and how our resources are managed.
@@ -80,7 +80,7 @@ function TransparencyPage() {
           <p>
             <a
               href="#"
-              className="inline-flex items-center gap-2 not-prose bg-zinc-100 hover:bg-zinc-200 text-ink px-4 py-2 rounded-full text-sm font-medium no-underline"
+              className="inline-flex items-center gap-2 not-prose bg-brand-soft/50 hover:bg-zinc-200 text-ink px-4 py-2 rounded-full text-sm font-medium no-underline"
             >
               <FileText className="size-4" /> Download Satzung (PDF)
             </a>
@@ -111,7 +111,7 @@ function TransparencyPage() {
           <p>
             <a
               href="#"
-              className="inline-flex items-center gap-2 not-prose bg-zinc-100 hover:bg-zinc-200 text-ink px-4 py-2 rounded-full text-sm font-medium no-underline"
+              className="inline-flex items-center gap-2 not-prose bg-brand-soft/50 hover:bg-zinc-200 text-ink px-4 py-2 rounded-full text-sm font-medium no-underline"
             >
               <FileText className="size-4" /> Activity Report 2026 (PDF) — coming soon
             </a>

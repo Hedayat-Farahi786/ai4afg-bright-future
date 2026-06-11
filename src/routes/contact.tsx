@@ -49,11 +49,11 @@ function ContactPage() {
             <h2 className="font-display font-semibold text-2xl mb-6">Reach us directly</h2>
             <ul className="space-y-5">
               <li className="flex gap-4">
-                <span className="mt-0.5 size-9 rounded-full bg-brand/10 grid place-items-center text-brand shrink-0">
+                <span className="mt-0.5 size-9 rounded-full bg-brand-soft/60 grid place-items-center text-brand shrink-0">
                   <Mail className="size-4" />
                 </span>
                 <div>
-                  <div className="text-xs uppercase tracking-widest text-zinc-500">Email</div>
+                  <div className="text-xs uppercase tracking-widest text-navy/60">Email</div>
                   <a
                     href="mailto:info@ai4afghanistan.org"
                     className="text-ink font-medium hover:text-brand"
@@ -63,22 +63,22 @@ function ContactPage() {
                 </div>
               </li>
               <li className="flex gap-4">
-                <span className="mt-0.5 size-9 rounded-full bg-brand/10 grid place-items-center text-brand shrink-0">
+                <span className="mt-0.5 size-9 rounded-full bg-brand-soft/60 grid place-items-center text-brand shrink-0">
                   <Phone className="size-4" />
                 </span>
                 <div>
-                  <div className="text-xs uppercase tracking-widest text-zinc-500">Phone</div>
+                  <div className="text-xs uppercase tracking-widest text-navy/60">Phone</div>
                   <a href="tel:+4917646294780" className="text-ink font-medium hover:text-brand">
                     +49 176 46294780
                   </a>
                 </div>
               </li>
               <li className="flex gap-4">
-                <span className="mt-0.5 size-9 rounded-full bg-brand/10 grid place-items-center text-brand shrink-0">
+                <span className="mt-0.5 size-9 rounded-full bg-brand-soft/60 grid place-items-center text-brand shrink-0">
                   <MapPin className="size-4" />
                 </span>
                 <div>
-                  <div className="text-xs uppercase tracking-widest text-zinc-500">Address</div>
+                  <div className="text-xs uppercase tracking-widest text-navy/60">Address</div>
                   <div className="text-ink font-medium leading-relaxed">
                     Randowstraße 7<br />
                     22547 Hamburg, Germany
@@ -87,11 +87,11 @@ function ContactPage() {
               </li>
             </ul>
 
-            <div className="mt-12 bg-ink text-white rounded-3xl p-8">
+            <div className="mt-12 bg-navy text-white rounded-3xl p-8">
               <h3 className="font-display font-semibold text-xl mb-2">
                 Stay updated
               </h3>
-              <p className="text-sm text-zinc-300 mb-5">
+              <p className="text-sm text-white/75 mb-5">
                 News, program updates, and stories — straight to your inbox.
               </p>
               <form className="flex flex-col sm:flex-row gap-3" onSubmit={handleNewsletter}>
@@ -99,7 +99,7 @@ function ContactPage() {
                   required
                   type="email"
                   placeholder="Your email address"
-                  className="flex-1 px-4 py-3 rounded-full bg-white/10 placeholder:text-zinc-400 text-white outline-none border border-white/10 focus:border-white/30"
+                  className="flex-1 px-4 py-3 rounded-full bg-white/10 placeholder:text-white/60 text-white outline-none border border-white/10 focus:border-white/30"
                 />
                 <button
                   type="submit"
@@ -113,7 +113,7 @@ function ContactPage() {
 
           <form
             onSubmit={handleContact}
-            className="bg-zinc-50 rounded-3xl p-8 lg:p-10 ring-1 ring-zinc-950/5"
+            className="bg-white shadow-sm rounded-3xl p-8 lg:p-10 ring-1 ring-navy/10"
           >
             <h2 className="font-display font-semibold text-2xl mb-6">Send us a message</h2>
             <div className="grid gap-5">
