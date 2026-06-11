@@ -346,6 +346,113 @@ function HomePage() {
         </div>
       </section>
 
+      {/* OUR TEAM */}
+      <section className="px-6 py-24 lg:py-28 bg-white shadow-sm border-y border-navy/10">
+        <div className="max-w-7xl mx-auto">
+          <Reveal className="max-w-[50ch] mb-14">
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+              Our Team
+            </span>
+            <h2 className="mt-4 font-display font-semibold text-3xl lg:text-4xl text-balance">
+              People behind AI4Afghanistan — volunteers, advisors, and founding members.
+            </h2>
+          </Reveal>
+          <Reveal delay={60}>
+            <TeamGroup
+              eyebrow="Executive Board"
+              title="Leading and representing the organization."
+              description="Sets strategic direction, represents the organization externally and legally, and ensures accountability, compliance, and financial transparency."
+              people={EXECUTIVE}
+            />
+          </Reveal>
+          <Reveal delay={80}>
+            <TeamGroup
+              eyebrow="Scientific Advisory Board (Interim)"
+              title="Guiding program design and responsible practice."
+              description="Advises on context-aware learning content, delivery methods, teacher capacity-building, and responsible AI review for early pilots and student projects."
+              people={SCIENTIFIC}
+            />
+          </Reveal>
+          <Reveal delay={80}>
+            <TeamGroup
+              eyebrow="Program Development Team"
+              title="Designing initiatives that are feasible and context-aware."
+              description="Defines project requirements, learning content, facilitation materials, and flexible delivery models in close cooperation with the Scientific Advisory Board."
+              people={PROGRAM}
+            />
+          </Reveal>
+          <Reveal delay={80}>
+            <TeamGroup
+              eyebrow="Operations & Resource Mobilization"
+              title="Keeping AI4Afghanistan effective and sustainable."
+              description="Manages administration, finance, and HR, and leads fundraising and grant processes that strengthen long-term sustainability."
+              people={OPS}
+            />
+          </Reveal>
+          <div className="mt-12 text-center">
+            <Link to="/about/team" className="inline-flex items-center gap-1.5 text-sm font-medium text-brand hover:gap-2 transition-all">
+              View the full team <ArrowRight className="size-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* DONORS & PARTNERS */}
+      <section className="px-6 py-24 lg:py-28">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-20">
+          <div>
+            <Reveal>
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+                Our Donors
+              </span>
+              <h2 className="mt-4 font-display font-semibold text-3xl text-balance">
+                Made possible by the generosity of our supporters.
+              </h2>
+              <p className="mt-4 text-navy/70 leading-relaxed max-w-[44ch]">
+                Profound gratitude to organizations and individuals funding AI capacity for Afghan
+                students. Relationships listed are placeholders to be confirmed.
+              </p>
+            </Reveal>
+            <Reveal delay={80} className="mt-8 grid sm:grid-cols-2 gap-4">
+              {DONORS.map((d) => (
+                <div
+                  key={d}
+                  className="aspect-[3/2] bg-white ring-1 ring-navy/10 rounded-2xl grid place-items-center text-center px-6 transition hover:ring-brand/40 hover:-translate-y-0.5"
+                >
+                  <div className="font-display font-semibold text-base text-navy/80">{d}</div>
+                </div>
+              ))}
+            </Reveal>
+          </div>
+          <div>
+            <Reveal>
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+                Institutional Partners
+              </span>
+              <h2 className="mt-4 font-display font-semibold text-3xl text-balance">
+                Building together with education and development partners.
+              </h2>
+              <p className="mt-4 text-navy/70 leading-relaxed max-w-[44ch]">
+                Education bodies, public schools, NGOs, international development agencies, and
+                civil society organizations. Listed partnerships are placeholders to be confirmed.
+              </p>
+            </Reveal>
+            <Reveal delay={80} className="mt-8 grid sm:grid-cols-2 gap-4">
+              {PARTNERS.map((p) => (
+                <div
+                  key={p}
+                  className="aspect-[3/2] bg-white ring-1 ring-navy/10 rounded-2xl grid place-items-center text-center px-5 transition hover:ring-brand/40 hover:-translate-y-0.5"
+                >
+                  <div className="font-display font-semibold text-base text-navy/80">{p}</div>
+                </div>
+              ))}
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+
+
       {/* SUPPORT OUR MISSION SECTION */}
       <section className="px-6 py-24 lg:py-28 bg-white shadow-sm border-y border-navy/10">
         <div className="max-w-7xl mx-auto">
