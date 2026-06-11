@@ -1,9 +1,44 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, ArrowRight, Heart, Users, Globe, BookOpen, Lightbulb, Shield } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
+import { Reveal } from "@/components/Reveal";
 import heroImg from "@/assets/hero-students.jpg";
 import trainingImg from "@/assets/program-training.jpg";
 import mentorshipImg from "@/assets/program-mentorship.jpg";
+
+type Person = { name: string; role: string };
+
+const EXECUTIVE: Person[] = [
+  { name: "Ing. Ahmad Siyar Sirat", role: "Chair, Founder" },
+  { name: "Farshad Azimi", role: "Deputy Chair, Founding Member" },
+  { name: "Sayed Amir Ziwari", role: "Treasurer, Founding Member" },
+  { name: "Zuhra Ziwari", role: "Secretary, Founding Member" },
+];
+const SCIENTIFIC: Person[] = [
+  { name: "Masihullah Ahmadi", role: "Scientific Advisor" },
+  { name: "Obaidullah Abdi", role: "Scientific Advisor" },
+  { name: "Ahmad Masih Parshan", role: "Scientific Advisor" },
+  { name: "Hosam Stanikzai", role: "Scientific Advisor" },
+];
+const PROGRAM: Person[] = [
+  { name: "Hedayatullah Farahi", role: "Program Development Lead" },
+  { name: "Mir Mazhar Kawyani", role: "Program Development Lead" },
+  { name: "Muhammad Mustafa Halim", role: "Program Development Lead" },
+  { name: "Waheedullah Hakim", role: "Program Development Lead" },
+  { name: "Matiullah Ahmadi", role: "Program Development Lead" },
+];
+const OPS: Person[] = [
+  { name: "Ehsanullah Farahi", role: "Head of Operations" },
+  { name: "Amanullah Farahi", role: "Head of Partnerships & Resource Mobilization" },
+];
+const DONORS = ["Malala Fund", "Azizi Developments", "GIZ", "The World Bank"];
+const PARTNERS = [
+  "Ministry of Education",
+  "AI.GERMANY",
+  "Bundesministerium für Bildung und Forschung",
+  "Kardan University",
+  "Initiative Transparente Zivilgesellschaft",
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -77,7 +112,7 @@ function HomePage() {
 
       {/* MISSION STATEMENT */}
       <section className="px-6 py-16 lg:py-24 bg-brand-soft/40 border-y border-navy/10">
-        <div className="max-w-5xl mx-auto text-center">
+        <Reveal className="max-w-5xl mx-auto text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
             Our Mission
           </span>
@@ -89,7 +124,7 @@ function HomePage() {
             institutional cooperation, and access to global learning opportunities, enabling their
             meaningful participation in an AI-driven world.
           </p>
-        </div>
+        </Reveal>
       </section>
 
       {/* IMPACT STATS */}
@@ -100,11 +135,11 @@ function HomePage() {
             { n: "100%", l: "Volunteer-led" },
             { n: "e.V.", l: "Registered nonprofit · Hamburg" },
             { n: "Global", l: "Mentor network" },
-          ].map((s) => (
-            <div key={s.l} className="flex flex-col gap-2">
+          ].map((s, i) => (
+            <Reveal key={s.l} delay={i * 80} className="flex flex-col gap-2">
               <span className="font-display font-semibold text-3xl lg:text-5xl text-ink">{s.n}</span>
               <span className="text-xs uppercase tracking-[0.16em] text-navy/60 font-medium">{s.l}</span>
-            </div>
+            </Reveal>
           ))}
         </div>
       </section>
@@ -112,12 +147,12 @@ function HomePage() {
       {/* WHAT / HOW / WHY */}
       <section className="px-6 py-24 lg:py-28">
         <div className="max-w-7xl mx-auto">
-          <div className="max-w-[44ch] mb-14">
+          <Reveal className="max-w-[44ch] mb-14">
             <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">Our Approach</span>
             <h2 className="mt-4 font-display font-semibold text-3xl lg:text-4xl text-balance">
               A clear focus: what we do, how we do it, and why it matters.
             </h2>
-          </div>
+          </Reveal>
           <div className="grid md:grid-cols-3 gap-12">
             {[
               {
@@ -135,14 +170,14 @@ function HomePage() {
                 title: "Meaningful participation in an AI-driven world.",
                 body: "So Afghan youth contribute to, not just consume from, the technologies shaping their future.",
               },
-            ].map((pillar) => (
-              <div key={pillar.eyebrow} className="flex flex-col gap-4">
+            ].map((pillar, i) => (
+              <Reveal key={pillar.eyebrow} delay={i * 100} className="flex flex-col gap-4">
                 <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
                   {pillar.eyebrow}
                 </span>
                 <h3 className="font-display font-semibold text-2xl text-balance">{pillar.title}</h3>
                 <p className="text-navy/70 text-pretty max-w-[40ch]">{pillar.body}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -278,7 +313,7 @@ function HomePage() {
       {/* PROGRAMS PREVIEW */}
       <section className="px-6 py-20 lg:py-24">
         <div className="max-w-7xl mx-auto">
-          <div className="flex justify-between items-end mb-12 lg:mb-16 gap-8 flex-wrap">
+          <Reveal className="flex justify-between items-end mb-12 lg:mb-16 gap-8 flex-wrap">
             <div className="max-w-[44ch]">
               <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
                 Our Programs
@@ -293,23 +328,134 @@ function HomePage() {
             >
               View all programs <ArrowRight className="size-4" />
             </Link>
-          </div>
+          </Reveal>
           <div className="grid md:grid-cols-2 gap-8">
-            <ProgramCard
-              img={trainingImg}
-              alt="Afghan students in a Kabul classroom learning AI and Python fundamentals"
-              title="Training & Capacity-Building"
-              body="Structured AI literacy and foundational skills for grades 10–12, plus train-the-trainer support for teachers."
-            />
-            <ProgramCard
-              img={mentorshipImg}
-              alt="Afghan students collaborating on an AI project with data visualizations on laptops"
-              title="Applied AI Projects & Innovation"
-              body="Guided student-led projects on locally relevant challenges, with mentorship from global practitioners."
-            />
+            <Reveal delay={60}>
+              <ProgramCard
+                img={trainingImg}
+                alt="Afghan students in a Kabul classroom learning AI and Python fundamentals"
+                title="Training & Capacity-Building"
+                body="Structured AI literacy and foundational skills for grades 10–12, plus train-the-trainer support for teachers."
+              />
+            </Reveal>
+            <Reveal delay={160}>
+              <ProgramCard
+                img={mentorshipImg}
+                alt="Afghan students collaborating on an AI project with data visualizations on laptops"
+                title="Applied AI Projects & Innovation"
+                body="Guided student-led projects on locally relevant challenges, with mentorship from global practitioners."
+              />
+            </Reveal>
           </div>
         </div>
       </section>
+
+      {/* OUR TEAM */}
+      <section className="px-6 py-24 lg:py-28 bg-white shadow-sm border-y border-navy/10">
+        <div className="max-w-7xl mx-auto">
+          <Reveal className="max-w-[50ch] mb-14">
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+              Our Team
+            </span>
+            <h2 className="mt-4 font-display font-semibold text-3xl lg:text-4xl text-balance">
+              People behind AI4Afghanistan — volunteers, advisors, and founding members.
+            </h2>
+          </Reveal>
+          <Reveal delay={60}>
+            <TeamGroup
+              eyebrow="Executive Board"
+              title="Leading and representing the organization."
+              description="Sets strategic direction, represents the organization externally and legally, and ensures accountability, compliance, and financial transparency."
+              people={EXECUTIVE}
+            />
+          </Reveal>
+          <Reveal delay={80}>
+            <TeamGroup
+              eyebrow="Scientific Advisory Board (Interim)"
+              title="Guiding program design and responsible practice."
+              description="Advises on context-aware learning content, delivery methods, teacher capacity-building, and responsible AI review for early pilots and student projects."
+              people={SCIENTIFIC}
+            />
+          </Reveal>
+          <Reveal delay={80}>
+            <TeamGroup
+              eyebrow="Program Development Team"
+              title="Designing initiatives that are feasible and context-aware."
+              description="Defines project requirements, learning content, facilitation materials, and flexible delivery models in close cooperation with the Scientific Advisory Board."
+              people={PROGRAM}
+            />
+          </Reveal>
+          <Reveal delay={80}>
+            <TeamGroup
+              eyebrow="Operations & Resource Mobilization"
+              title="Keeping AI4Afghanistan effective and sustainable."
+              description="Manages administration, finance, and HR, and leads fundraising and grant processes that strengthen long-term sustainability."
+              people={OPS}
+            />
+          </Reveal>
+          <div className="mt-12 text-center">
+            <Link to="/about/team" className="inline-flex items-center gap-1.5 text-sm font-medium text-brand hover:gap-2 transition-all">
+              View the full team <ArrowRight className="size-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* DONORS & PARTNERS */}
+      <section className="px-6 py-24 lg:py-28">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-20">
+          <div>
+            <Reveal>
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+                Our Donors
+              </span>
+              <h2 className="mt-4 font-display font-semibold text-3xl text-balance">
+                Made possible by the generosity of our supporters.
+              </h2>
+              <p className="mt-4 text-navy/70 leading-relaxed max-w-[44ch]">
+                Profound gratitude to organizations and individuals funding AI capacity for Afghan
+                students. Relationships listed are placeholders to be confirmed.
+              </p>
+            </Reveal>
+            <Reveal delay={80} className="mt-8 grid sm:grid-cols-2 gap-4">
+              {DONORS.map((d) => (
+                <div
+                  key={d}
+                  className="aspect-[3/2] bg-white ring-1 ring-navy/10 rounded-2xl grid place-items-center text-center px-6 transition hover:ring-brand/40 hover:-translate-y-0.5"
+                >
+                  <div className="font-display font-semibold text-base text-navy/80">{d}</div>
+                </div>
+              ))}
+            </Reveal>
+          </div>
+          <div>
+            <Reveal>
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+                Institutional Partners
+              </span>
+              <h2 className="mt-4 font-display font-semibold text-3xl text-balance">
+                Building together with education and development partners.
+              </h2>
+              <p className="mt-4 text-navy/70 leading-relaxed max-w-[44ch]">
+                Education bodies, public schools, NGOs, international development agencies, and
+                civil society organizations. Listed partnerships are placeholders to be confirmed.
+              </p>
+            </Reveal>
+            <Reveal delay={80} className="mt-8 grid sm:grid-cols-2 gap-4">
+              {PARTNERS.map((p) => (
+                <div
+                  key={p}
+                  className="aspect-[3/2] bg-white ring-1 ring-navy/10 rounded-2xl grid place-items-center text-center px-5 transition hover:ring-brand/40 hover:-translate-y-0.5"
+                >
+                  <div className="font-display font-semibold text-base text-navy/80">{p}</div>
+                </div>
+              ))}
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+
 
       {/* SUPPORT OUR MISSION SECTION */}
       <section className="px-6 py-24 lg:py-28 bg-white shadow-sm border-y border-navy/10">
@@ -514,3 +660,51 @@ function CtaCard({
     </div>
   );
 }
+
+function TeamGroup({
+  eyebrow,
+  title,
+  description,
+  people,
+}: {
+  eyebrow: string;
+  title: string;
+  description: string;
+  people: Person[];
+}) {
+  return (
+    <div className="grid lg:grid-cols-[1fr_2fr] gap-10 lg:gap-16 py-10 lg:py-14 border-t border-navy/10 first:border-t-0">
+      <div>
+        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+          {eyebrow}
+        </span>
+        <h3 className="mt-3 font-display font-semibold text-xl lg:text-2xl text-balance">
+          {title}
+        </h3>
+        <p className="mt-3 text-navy/70 max-w-[42ch] leading-relaxed text-sm">{description}</p>
+      </div>
+      <div className="grid sm:grid-cols-2 gap-3">
+        {people.map((p) => (
+          <div
+            key={p.name}
+            className="bg-surface ring-1 ring-navy/10 rounded-2xl p-4 flex items-center gap-3 transition hover:ring-brand/40 hover:-translate-y-0.5"
+          >
+            <div className="size-10 shrink-0 rounded-full bg-brand-soft/60 grid place-items-center text-brand font-display font-semibold text-sm">
+              {p.name
+                .split(" ")
+                .map((w) => w[0])
+                .filter((c) => /[A-Z]/.test(c))
+                .slice(0, 2)
+                .join("")}
+            </div>
+            <div className="min-w-0">
+              <div className="font-medium text-ink text-sm truncate">{p.name}</div>
+              <div className="text-xs text-navy/60 leading-snug">{p.role}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
