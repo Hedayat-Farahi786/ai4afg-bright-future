@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/components/SiteLayout";
+import { PartnerLogo } from "@/components/PartnerLogo";
 
 export const Route = createFileRoute("/about/donors")({
   head: () => ({
@@ -35,12 +36,7 @@ function DonorsPage() {
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {DONORS.map((d) => (
-          <div
-            key={d}
-            className="aspect-[3/2] bg-white ring-1 ring-navy/10 rounded-2xl grid place-items-center text-center px-6"
-          >
-            <div className="font-display font-semibold text-lg text-navy/80">{d}</div>
-          </div>
+          <PartnerLogo key={d} name={d} />
         ))}
       </div>
       <p className="mt-12 text-sm text-navy/60">
