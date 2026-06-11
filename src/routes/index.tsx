@@ -147,12 +147,12 @@ function HomePage() {
       {/* WHAT / HOW / WHY */}
       <section className="px-6 py-24 lg:py-28">
         <div className="max-w-7xl mx-auto">
-          <div className="max-w-[44ch] mb-14">
+          <Reveal className="max-w-[44ch] mb-14">
             <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">Our Approach</span>
             <h2 className="mt-4 font-display font-semibold text-3xl lg:text-4xl text-balance">
               A clear focus: what we do, how we do it, and why it matters.
             </h2>
-          </div>
+          </Reveal>
           <div className="grid md:grid-cols-3 gap-12">
             {[
               {
@@ -170,14 +170,14 @@ function HomePage() {
                 title: "Meaningful participation in an AI-driven world.",
                 body: "So Afghan youth contribute to, not just consume from, the technologies shaping their future.",
               },
-            ].map((pillar) => (
-              <div key={pillar.eyebrow} className="flex flex-col gap-4">
+            ].map((pillar, i) => (
+              <Reveal key={pillar.eyebrow} delay={i * 100} className="flex flex-col gap-4">
                 <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
                   {pillar.eyebrow}
                 </span>
                 <h3 className="font-display font-semibold text-2xl text-balance">{pillar.title}</h3>
                 <p className="text-navy/70 text-pretty max-w-[40ch]">{pillar.body}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
