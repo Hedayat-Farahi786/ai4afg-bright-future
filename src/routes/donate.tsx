@@ -39,7 +39,7 @@ function DonatePage() {
       <Section>
         <div className="grid lg:grid-cols-[3fr_2fr] gap-12 lg:gap-20">
           {/* Donation selector */}
-          <div className="bg-white shadow-sm rounded-3xl p-8 lg:p-10 ring-1 ring-navy/10">
+          <div className="min-w-0 bg-white shadow-sm rounded-3xl p-6 sm:p-8 lg:p-10 ring-1 ring-navy/10">
             <div className="inline-flex p-1 bg-white rounded-full ring-1 ring-navy/10 mb-8">
               <button
                 onClick={() => setTab("one")}
