@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
+import { BrandMark } from "@/components/BrandMark";
 
 const NAV = [
   { to: "/about", label: "About" },
@@ -16,12 +17,16 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 bg-surface/85 backdrop-blur-md border-b border-zinc-950/5">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <Link to="/" className="flex flex-col leading-none" onClick={() => setOpen(false)}>
-          <span className="font-display font-semibold text-xl tracking-tight">AI4Afghanistan</span>
-          <span className="text-[10px] uppercase tracking-[0.18em] text-zinc-500 mt-1.5">
-            we grow beyond boundaries
+        <Link to="/" className="flex items-center gap-3 leading-none" onClick={() => setOpen(false)}>
+          <BrandMark className="size-9 shrink-0" />
+          <span className="flex flex-col">
+            <span className="font-display font-semibold text-lg tracking-tight text-ink">AI4AFGHANISTAN</span>
+            <span className="text-[10px] uppercase tracking-[0.18em] text-brand mt-1 font-medium">
+              we grow beyond boundaries
+            </span>
           </span>
         </Link>
+
 
         <nav className="hidden lg:flex items-center gap-8">
           {NAV.map((item) => (

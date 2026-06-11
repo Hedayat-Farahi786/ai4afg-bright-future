@@ -46,21 +46,22 @@ function HomePage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/donate"
-                className="flex items-center gap-2 bg-brand text-white py-3 pr-6 pl-3 rounded-full ring-1 ring-brand cursor-pointer hover:brightness-110 transition"
+                to="/get-involved"
+                className="inline-flex items-center gap-2 bg-brand text-white py-3.5 pl-6 pr-3 rounded-full shadow-sm hover:brightness-110 transition"
               >
-                <span className="bg-white/20 rounded-full p-1">
+                <span className="text-sm font-semibold">Join Our Mission</span>
+                <span className="bg-white/20 rounded-full p-1.5">
                   <ArrowUpRight className="size-4" />
                 </span>
-                <span className="text-sm font-medium">Support Our Mission</span>
               </Link>
               <Link
-                to="/get-involved"
-                className="px-6 py-3 rounded-full ring-1 ring-zinc-300 text-sm font-medium text-zinc-700 hover:bg-zinc-50 transition-colors"
+                to="/donate"
+                className="inline-flex items-center px-6 py-3.5 rounded-full bg-navy text-white text-sm font-semibold hover:brightness-125 transition"
               >
-                Join Our Mission
+                Support Our Mission
               </Link>
             </div>
+
           </div>
           <div className="lg:w-5/12 w-full">
             <img
@@ -75,7 +76,7 @@ function HomePage() {
       </section>
 
       {/* MISSION STATEMENT */}
-      <section className="px-6 py-16 lg:py-24 bg-zinc-50 border-y border-zinc-950/5">
+      <section className="px-6 py-16 lg:py-24 bg-brand-soft/40 border-y border-zinc-950/5">
         <div className="max-w-5xl mx-auto text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
             Our Mission
@@ -185,7 +186,7 @@ function HomePage() {
       </section>
 
       {/* TRANSPARENCY STRIP */}
-      <section className="border-y border-zinc-950/5 py-10 bg-zinc-50/60">
+      <section className="border-y border-zinc-950/5 py-10 bg-brand-soft/30">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-wrap justify-between items-center gap-x-10 gap-y-4 text-zinc-500">
             <span className="text-xs font-semibold tracking-[0.18em] uppercase">
@@ -283,7 +284,7 @@ function CtaCard({
       className={`p-8 rounded-3xl flex flex-col ${
         highlight
           ? "bg-brand text-white"
-          : "bg-zinc-50 text-ink ring-1 ring-zinc-950/5"
+          : "bg-white text-ink ring-1 ring-zinc-950/5"
       }`}
     >
       <h3 className="font-display font-semibold text-2xl mb-3">{title}</h3>

@@ -1,54 +1,48 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { BrandMark } from "@/components/BrandMark";
 
 export function SiteFooter() {
   return (
-    <footer className="pt-24 pb-12 px-6 bg-zinc-50 border-t border-zinc-950/5 mt-32">
+    <footer className="pt-24 pb-12 px-6 bg-navy text-white mt-32">
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 mb-16">
         <div className="md:col-span-2">
-          <div className="flex flex-col mb-6">
-            <span className="font-display font-semibold text-xl tracking-tight">AI4Afghanistan</span>
-            <span className="text-[10px] uppercase tracking-[0.18em] text-zinc-500 mt-1.5">
-              we grow beyond boundaries
+          <div className="flex items-center gap-3 mb-6">
+            <BrandMark className="size-10 shrink-0" />
+            <span className="flex flex-col leading-none">
+              <span className="font-display font-semibold text-lg tracking-tight">AI4AFGHANISTAN</span>
+              <span className="text-[10px] uppercase tracking-[0.18em] text-brand mt-1 font-medium">
+                we grow beyond boundaries
+              </span>
             </span>
           </div>
-          <p className="text-sm text-zinc-600 max-w-[42ch] leading-relaxed mb-6">
+
+          <p className="text-sm text-white/70 max-w-[42ch] leading-relaxed mb-6">
             AI for Afghanistan (AI4Afghanistan) e.V. is a registered non-profit building AI capacity
             for Afghan upper-secondary students through tailored learning, institutional cooperation,
             and access to global learning opportunities.
           </p>
           <div className="flex items-center gap-3">
-            <a
-              href="https://www.facebook.com/ai4afgorg/"
-              aria-label="Facebook"
-              className="p-2 rounded-full ring-1 ring-zinc-950/10 hover:bg-white text-zinc-700"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Facebook className="size-4" />
-            </a>
-            <a
-              href="https://www.instagram.com/ai4afgorg/"
-              aria-label="Instagram"
-              className="p-2 rounded-full ring-1 ring-zinc-950/10 hover:bg-white text-zinc-700"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Instagram className="size-4" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/ai4afgorg/"
-              aria-label="LinkedIn"
-              className="p-2 rounded-full ring-1 ring-zinc-950/10 hover:bg-white text-zinc-700"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Linkedin className="size-4" />
-            </a>
+            {[
+              { href: "https://www.facebook.com/ai4afgorg/", label: "Facebook", Icon: Facebook },
+              { href: "https://www.instagram.com/ai4afgorg/", label: "Instagram", Icon: Instagram },
+              { href: "https://www.linkedin.com/in/ai4afgorg/", label: "LinkedIn", Icon: Linkedin },
+            ].map(({ href, label, Icon }) => (
+              <a
+                key={label}
+                href={href}
+                aria-label={label}
+                className="p-2 rounded-full ring-1 ring-white/20 hover:bg-white hover:text-navy text-white/80 transition"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Icon className="size-4" />
+              </a>
+            ))}
             <a
               href="https://x.com/AI4AfgOrg"
               aria-label="X"
-              className="p-2 rounded-full ring-1 ring-zinc-950/10 hover:bg-white text-zinc-700 text-[11px] font-semibold"
+              className="p-2 rounded-full ring-1 ring-white/20 hover:bg-white hover:text-navy text-white/80 text-[11px] font-semibold transition"
               target="_blank"
               rel="noreferrer"
             >
@@ -58,31 +52,31 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <h4 className="text-xs font-semibold uppercase tracking-widest mb-5 text-zinc-900">
+          <h4 className="text-xs font-semibold uppercase tracking-widest mb-5 text-brand">
             Explore
           </h4>
-          <ul className="space-y-3 text-sm text-zinc-600">
-            <li><Link to="/about" className="hover:text-ink">About</Link></li>
-            <li><Link to="/work" className="hover:text-ink">Our Work</Link></li>
-            <li><Link to="/get-involved" className="hover:text-ink">Get Involved</Link></li>
-            <li><Link to="/donate" className="hover:text-ink">Donate</Link></li>
-            <li><Link to="/partner-with-us" className="hover:text-ink">Partner With Us</Link></li>
-            <li><Link to="/contact" className="hover:text-ink">Contact</Link></li>
+          <ul className="space-y-3 text-sm text-white/75">
+            <li><Link to="/about" className="hover:text-white">About</Link></li>
+            <li><Link to="/work" className="hover:text-white">Our Work</Link></li>
+            <li><Link to="/get-involved" className="hover:text-white">Get Involved</Link></li>
+            <li><Link to="/donate" className="hover:text-white">Donate</Link></li>
+            <li><Link to="/partner-with-us" className="hover:text-white">Partner With Us</Link></li>
+            <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
           </ul>
         </div>
 
         <div>
-          <h4 className="text-xs font-semibold uppercase tracking-widest mb-5 text-zinc-900">
+          <h4 className="text-xs font-semibold uppercase tracking-widest mb-5 text-brand">
             Contact
           </h4>
-          <ul className="space-y-3 text-sm text-zinc-600">
+          <ul className="space-y-3 text-sm text-white/75">
             <li>
-              <a href="mailto:info@ai4afghanistan.org" className="hover:text-ink">
+              <a href="mailto:info@ai4afghanistan.org" className="hover:text-white">
                 info@ai4afghanistan.org
               </a>
             </li>
             <li>
-              <a href="tel:+4917646294780" className="hover:text-ink">+49 176 46294780</a>
+              <a href="tel:+4917646294780" className="hover:text-white">+49 176 46294780</a>
             </li>
             <li className="leading-relaxed">
               Randowstraße 7<br />
@@ -92,14 +86,15 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto pt-8 border-t border-zinc-950/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] font-medium text-zinc-500 uppercase tracking-widest">
+      <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] font-medium text-white/50 uppercase tracking-widest">
         <span>© {new Date().getFullYear()} AI for Afghanistan (AI4Afghanistan) e.V.</span>
         <div className="flex flex-wrap gap-6">
-          <Link to="/legal/imprint" className="hover:text-ink">Imprint</Link>
-          <Link to="/legal/privacy" className="hover:text-ink">Privacy</Link>
-          <Link to="/legal/disclaimer" className="hover:text-ink">Disclaimer</Link>
+          <Link to="/legal/imprint" className="hover:text-white">Imprint</Link>
+          <Link to="/legal/privacy" className="hover:text-white">Privacy</Link>
+          <Link to="/legal/disclaimer" className="hover:text-white">Disclaimer</Link>
         </div>
       </div>
+
     </footer>
   );
 }
