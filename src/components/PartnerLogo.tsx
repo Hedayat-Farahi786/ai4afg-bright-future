@@ -1,153 +1,119 @@
+import malalaLogo from "@/assets/logos/malala-fund.png.asset.json";
+import gizLogo from "@/assets/logos/giz.png.asset.json";
+import worldbankLogo from "@/assets/logos/worldbank.png.asset.json";
+import bmbfLogo from "@/assets/logos/bmbf.png.asset.json";
+import kardanLogo from "@/assets/logos/kardan.png.asset.json";
+import aziziLogo from "@/assets/logos/azizi.png.asset.json";
+import itzLogo from "@/assets/logos/itz.png.asset.json";
+import moeLogo from "@/assets/logos/moe-af.png.asset.json";
+
 type Variant = {
-  initials: string;
   label: string;
   sub?: string;
-  bg: string; // background tint
-  fg: string; // initials/text color
-  accent: string; // accent bar color
-  font?: "serif" | "sans" | "mono";
+  src?: string;
+  // Fallback monogram styling when no logo is provided
+  initials?: string;
+  bg?: string;
+  fg?: string;
+  accent?: string;
 };
 
 const PARTNERS: Record<string, Variant> = {
-  // Donors
   "Malala Fund": {
-    initials: "MF",
     label: "Malala Fund",
     sub: "Education for every girl",
-    bg: "#fdf2f8",
-    fg: "#9d174d",
-    accent: "#ec4899",
-    font: "serif",
+    src: malalaLogo.url,
   },
   "Azizi Developments": {
-    initials: "AZ",
-    label: "Azizi",
-    sub: "Developments",
-    bg: "#fef9c3",
-    fg: "#854d0e",
-    accent: "#ca8a04",
-    font: "sans",
+    label: "Azizi Developments",
+    sub: "Building communities",
+    src: aziziLogo.url,
   },
   GIZ: {
-    initials: "giz",
     label: "GIZ",
     sub: "Deutsche Gesellschaft für Internationale Zusammenarbeit",
-    bg: "#fef2f2",
-    fg: "#991b1b",
-    accent: "#dc2626",
-    font: "sans",
+    src: gizLogo.url,
   },
   "The World Bank": {
-    initials: "WB",
     label: "The World Bank",
     sub: "IBRD · IDA",
-    bg: "#eff6ff",
-    fg: "#1e3a8a",
-    accent: "#1d4ed8",
-    font: "serif",
+    src: worldbankLogo.url,
   },
-  // Institutional partners
   "Ministry of Education": {
-    initials: "MoE",
     label: "Ministry of Education",
     sub: "Afghanistan",
-    bg: "#ecfdf5",
-    fg: "#065f46",
-    accent: "#059669",
-    font: "serif",
+    src: moeLogo.url,
   },
   "AI.GERMANY": {
-    initials: "AI",
     label: "AI.GERMANY",
-    sub: "Künstliche Intelligenz",
-    bg: "#1e293b",
+    sub: "Künstliche Intelligenz · Germany",
+    initials: "AI",
+    bg: "#0f172a",
     fg: "#f1f5f9",
     accent: "#38bdf8",
-    font: "mono",
   },
   "Bundesministerium für Bildung und Forschung": {
-    initials: "BMBF",
-    label: "Bundesministerium",
-    sub: "für Bildung und Forschung",
-    bg: "#fef3c7",
-    fg: "#1c1917",
-    accent: "#f59e0b",
-    font: "sans",
+    label: "Bundesministerium für Bildung und Forschung",
+    sub: "Federal Ministry · Germany",
+    src: bmbfLogo.url,
   },
   "Kardan University": {
-    initials: "KU",
     label: "Kardan University",
     sub: "Kabul · Afghanistan",
-    bg: "#faf5ff",
-    fg: "#581c87",
-    accent: "#7e22ce",
-    font: "serif",
+    src: kardanLogo.url,
   },
   "Initiative Transparente Zivilgesellschaft": {
-    initials: "ITZ",
-    label: "Initiative Transparente",
-    sub: "Zivilgesellschaft",
-    bg: "#f0fdfa",
-    fg: "#134e4a",
-    accent: "#0d9488",
-    font: "sans",
+    label: "Initiative Transparente Zivilgesellschaft",
+    sub: "Transparency commitment",
+    src: itzLogo.url,
   },
 };
 
 export function PartnerLogo({ name }: { name: string }) {
   const v = PARTNERS[name] ?? {
-    initials: name.slice(0, 2).toUpperCase(),
     label: name,
+    initials: name.slice(0, 2).toUpperCase(),
     bg: "#f8fafc",
     fg: "#0f172a",
-    accent: "#16a34a",
-    font: "sans" as const,
+    accent: "#c2410c",
   };
-  const fontFamily =
-    v.font === "serif"
-      ? "'Times New Roman', Georgia, serif"
-      : v.font === "mono"
-      ? "ui-monospace, 'JetBrains Mono', monospace"
-      : "Poppins, ui-sans-serif, system-ui, sans-serif";
 
   return (
     <div
-      className="group aspect-[3/2] rounded-2xl ring-1 ring-navy/10 overflow-hidden flex flex-col transition hover:ring-brand/40 hover:-translate-y-0.5 shadow-sm"
-      style={{ background: v.bg }}
+      className="group aspect-[3/2] rounded-2xl ring-1 ring-navy/10 bg-white overflow-hidden flex flex-col transition hover:ring-brand/40 hover:-translate-y-0.5 shadow-sm"
+      title={v.label}
     >
-      <div className="flex-1 flex items-center justify-center px-6 py-4">
-        <div className="flex items-center gap-3.5 min-w-0">
-          <div
-            className="shrink-0 size-12 rounded-xl grid place-items-center font-bold text-lg"
-            style={{
-              background: v.accent,
-              color: "#fff",
-              fontFamily,
-              letterSpacing: v.font === "mono" ? "-0.04em" : "-0.02em",
-            }}
-          >
-            {v.initials}
-          </div>
-          <div className="min-w-0">
+      <div className="flex-1 flex items-center justify-center px-5 py-5 min-h-0">
+        {v.src ? (
+          <img
+            src={v.src}
+            alt={v.label}
+            loading="lazy"
+            className="max-h-[64px] sm:max-h-[72px] max-w-[80%] w-auto object-contain"
+          />
+        ) : (
+          <div className="flex items-center gap-3 min-w-0">
             <div
-              className="font-semibold leading-tight truncate text-[15px]"
-              style={{ color: v.fg, fontFamily }}
-              title={v.label}
+              className="shrink-0 size-12 rounded-xl grid place-items-center font-bold text-lg text-white"
+              style={{ background: v.accent }}
             >
-              {v.label}
+              {v.initials}
             </div>
-            {v.sub && (
+            <div className="min-w-0">
               <div
-                className="text-[11px] leading-tight mt-1 opacity-75 line-clamp-2"
-                style={{ color: v.fg }}
+                className="font-semibold leading-tight text-[14px] text-ink"
+                style={{ color: v.fg ?? "#0f172a" }}
               >
-                {v.sub}
+                {v.label}
               </div>
-            )}
+            </div>
           </div>
-        </div>
+        )}
       </div>
-      <div className="h-1.5 w-full" style={{ background: v.accent }} />
+      <div className="px-4 py-2.5 border-t border-navy/5 bg-surface/50">
+        <div className="text-[11px] font-medium text-navy/80 truncate">{v.label}</div>
+        {v.sub && <div className="text-[10px] text-navy/50 truncate">{v.sub}</div>}
+      </div>
     </div>
   );
 }
