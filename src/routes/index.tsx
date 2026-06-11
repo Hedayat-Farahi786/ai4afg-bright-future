@@ -92,34 +92,59 @@ function HomePage() {
         </div>
       </section>
 
-      {/* WHAT / HOW / WHY */}
-      <section className="px-6 py-24 lg:py-28">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+      {/* IMPACT STATS */}
+      <section className="px-6 py-16 lg:py-20 border-b border-navy/10">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
           {[
-            {
-              eyebrow: "→ What",
-              title: "Build AI capacity for Afghan students.",
-              body: "Foundational AI literacy, applied skills, and responsible practice — starting in grades 10–12.",
-            },
-            {
-              eyebrow: "→ How",
-              title: "Tailored programs, partnerships, global reach.",
-              body: "Through tailored learning, institutional cooperation, and access to global learning opportunities.",
-            },
-            {
-              eyebrow: "→ Why",
-              title: "Meaningful participation in an AI-driven world.",
-              body: "So Afghan youth contribute to, not just consume from, the technologies shaping their future.",
-            },
-          ].map((pillar) => (
-            <div key={pillar.eyebrow} className="flex flex-col gap-4">
-              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
-                {pillar.eyebrow}
-              </span>
-              <h3 className="font-display font-semibold text-2xl text-balance">{pillar.title}</h3>
-              <p className="text-navy/70 text-pretty max-w-[40ch]">{pillar.body}</p>
+            { n: "10–12", l: "Target school grades" },
+            { n: "100%", l: "Volunteer-led" },
+            { n: "e.V.", l: "Registered nonprofit · Hamburg" },
+            { n: "Global", l: "Mentor network" },
+          ].map((s) => (
+            <div key={s.l} className="flex flex-col gap-2">
+              <span className="font-display font-semibold text-3xl lg:text-5xl text-ink">{s.n}</span>
+              <span className="text-xs uppercase tracking-[0.16em] text-navy/60 font-medium">{s.l}</span>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* WHAT / HOW / WHY */}
+      <section className="px-6 py-24 lg:py-28">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-[44ch] mb-14">
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">Our Approach</span>
+            <h2 className="mt-4 font-display font-semibold text-3xl lg:text-4xl text-balance">
+              A clear focus: what we do, how we do it, and why it matters.
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-12">
+            {[
+              {
+                eyebrow: "→ What",
+                title: "Build AI capacity for Afghan students.",
+                body: "Foundational AI literacy, applied skills, and responsible practice — starting in grades 10–12.",
+              },
+              {
+                eyebrow: "→ How",
+                title: "Tailored programs, partnerships, global reach.",
+                body: "Through tailored learning, institutional cooperation, and access to global learning opportunities.",
+              },
+              {
+                eyebrow: "→ Why",
+                title: "Meaningful participation in an AI-driven world.",
+                body: "So Afghan youth contribute to, not just consume from, the technologies shaping their future.",
+              },
+            ].map((pillar) => (
+              <div key={pillar.eyebrow} className="flex flex-col gap-4">
+                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+                  {pillar.eyebrow}
+                </span>
+                <h3 className="font-display font-semibold text-2xl text-balance">{pillar.title}</h3>
+                <p className="text-navy/70 text-pretty max-w-[40ch]">{pillar.body}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
