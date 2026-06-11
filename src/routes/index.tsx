@@ -66,47 +66,68 @@ function HomePage() {
   return (
     <SiteLayout>
       {/* HERO */}
-      <section className="py-14 sm:py-20 lg:py-28 px-5 sm:px-6">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-end gap-10 lg:gap-16">
-          <div className="lg:w-7/12 w-full min-w-0">
-            <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] text-brand">
-              A Nonprofit Building AI Capacity for Afghan Students
-            </span>
-            <h1 className="mt-4 sm:mt-5 font-display font-semibold text-[2rem] leading-[1.08] sm:text-5xl lg:text-7xl sm:leading-[1.02] text-balance max-w-[20ch] mb-6 sm:mb-8">
-              Empowering Afghan Youth Through AI Innovation
-            </h1>
-            <p className="text-base sm:text-lg lg:text-xl text-navy/70 max-w-[52ch] text-pretty mb-8 sm:mb-10 leading-relaxed">
-              We're training the next generation of Afghan innovators. Real skills, real
-              opportunities, real change — built through tailored learning, institutional
-              cooperation, and global connections.
-            </p>
-            <div className="flex flex-wrap gap-3 sm:gap-4">
-              <Link
-                to="/get-involved"
-                className="inline-flex items-center gap-2 bg-brand text-white py-3 pl-5 pr-2.5 sm:py-3.5 sm:pl-6 sm:pr-3 rounded-full shadow-sm hover:brightness-110 transition"
-              >
-                <span className="text-sm font-semibold">Join Our Mission</span>
-                <span className="bg-white/20 rounded-full p-1.5">
-                  <ArrowUpRight className="size-4" />
+      {/* HERO */}
+      <section className="relative overflow-hidden">
+        {/* Decorative brand accents (mobile-focused, harmless on desktop) */}
+        <div aria-hidden className="pointer-events-none absolute top-0 right-0 w-40 h-40 bg-brand/[0.06] rounded-full -mr-20 -mt-10 blur-2xl lg:hidden" />
+        <div aria-hidden className="pointer-events-none absolute bottom-0 left-0 w-56 h-56 bg-brand/[0.06] rounded-full -ml-28 -mb-28 blur-2xl lg:hidden" />
+
+        <div className="relative py-12 sm:py-20 lg:py-28 px-6 sm:px-6">
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-end gap-10 lg:gap-16">
+            <div className="lg:w-7/12 w-full min-w-0">
+              <span className="inline-flex items-center gap-2 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+                <span className="hidden sm:inline-block w-5 h-px bg-brand/40" aria-hidden />
+                A Nonprofit Building AI Capacity
+              </span>
+
+              {/* Mobile headline: forced 3-line break, no orphans */}
+              <h1 className="mt-4 sm:mt-5 font-display font-extrabold tracking-tight text-ink text-balance">
+                <span className="block lg:hidden text-[32px] leading-[1.06]">
+                  Empowering<br />
+                  Afghan Youth<br />
+                  Through<br />
+                  <span className="text-brand">AI Innovation</span>
                 </span>
-              </Link>
-              <Link
-                to="/donate"
-                className="inline-flex items-center px-5 py-3 sm:px-6 sm:py-3.5 rounded-full bg-navy text-white text-sm font-semibold hover:brightness-125 transition"
-              >
-                Support Our Mission
-              </Link>
+                <span className="hidden lg:block text-5xl lg:text-7xl leading-[1.02] max-w-[20ch]">
+                  Empowering Afghan Youth Through <span className="text-brand">AI Innovation</span>
+                </span>
+              </h1>
+
+              <p className="mt-5 sm:mt-6 text-[15px] sm:text-lg lg:text-xl text-navy/70 max-w-[52ch] text-pretty leading-relaxed">
+                We're training the next generation of Afghan innovators. Real skills, real
+                opportunities, real change — built through tailored learning, institutional
+                cooperation, and global connections.
+              </p>
+
+              {/* CTAs: full-width stacked on mobile, inline pills on tablet+ */}
+              <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4">
+                <Link
+                  to="/get-involved"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand text-white font-semibold py-4 sm:py-3.5 px-6 rounded-xl sm:rounded-full shadow-lg shadow-brand/20 hover:brightness-110 transition text-[15px]"
+                >
+                  <span>Join Our Mission</span>
+                  <ArrowUpRight className="size-[18px]" strokeWidth={2.5} />
+                </Link>
+                <Link
+                  to="/donate"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border-2 border-ink text-ink font-semibold py-[14px] sm:py-3 px-6 rounded-xl sm:rounded-full hover:bg-ink hover:text-white transition text-[15px]"
+                >
+                  Support Our Mission
+                </Link>
+              </div>
             </div>
 
-          </div>
-          <div className="lg:w-5/12 w-full">
-            <img
-              src={heroImg}
-              alt="Afghan high school students collaborating around a laptop in a bright classroom"
-              width={1280}
-              height={1600}
-              className="w-full aspect-[4/5] object-cover rounded-3xl ring-1 ring-black/5"
-            />
+            <div className="lg:w-5/12 w-full">
+              <div className="relative">
+                <img
+                  src={heroImg}
+                  alt="Afghan high school students collaborating around a laptop in a bright classroom"
+                  width={1280}
+                  height={1600}
+                  className="w-full aspect-[4/5] object-cover rounded-3xl ring-1 ring-black/5 shadow-2xl shadow-black/10"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
