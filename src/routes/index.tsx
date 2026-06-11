@@ -313,7 +313,7 @@ function HomePage() {
       {/* PROGRAMS PREVIEW */}
       <section className="px-6 py-20 lg:py-24">
         <div className="max-w-7xl mx-auto">
-          <div className="flex justify-between items-end mb-12 lg:mb-16 gap-8 flex-wrap">
+          <Reveal className="flex justify-between items-end mb-12 lg:mb-16 gap-8 flex-wrap">
             <div className="max-w-[44ch]">
               <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
                 Our Programs
@@ -328,20 +328,24 @@ function HomePage() {
             >
               View all programs <ArrowRight className="size-4" />
             </Link>
-          </div>
+          </Reveal>
           <div className="grid md:grid-cols-2 gap-8">
-            <ProgramCard
-              img={trainingImg}
-              alt="Afghan students in a Kabul classroom learning AI and Python fundamentals"
-              title="Training & Capacity-Building"
-              body="Structured AI literacy and foundational skills for grades 10–12, plus train-the-trainer support for teachers."
-            />
-            <ProgramCard
-              img={mentorshipImg}
-              alt="Afghan students collaborating on an AI project with data visualizations on laptops"
-              title="Applied AI Projects & Innovation"
-              body="Guided student-led projects on locally relevant challenges, with mentorship from global practitioners."
-            />
+            <Reveal delay={60}>
+              <ProgramCard
+                img={trainingImg}
+                alt="Afghan students in a Kabul classroom learning AI and Python fundamentals"
+                title="Training & Capacity-Building"
+                body="Structured AI literacy and foundational skills for grades 10–12, plus train-the-trainer support for teachers."
+              />
+            </Reveal>
+            <Reveal delay={160}>
+              <ProgramCard
+                img={mentorshipImg}
+                alt="Afghan students collaborating on an AI project with data visualizations on laptops"
+                title="Applied AI Projects & Innovation"
+                body="Guided student-led projects on locally relevant challenges, with mentorship from global practitioners."
+              />
+            </Reveal>
           </div>
         </div>
       </section>
