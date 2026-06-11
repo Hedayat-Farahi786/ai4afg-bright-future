@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { ArrowUpRight, ArrowRight, Heart, Users, Globe, BookOpen, Lightbulb, Shield } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import heroImg from "@/assets/hero-students.jpg";
 import trainingImg from "@/assets/program-training.jpg";
@@ -148,6 +148,107 @@ function HomePage() {
         </div>
       </section>
 
+      {/* ABOUT US SECTION */}
+      <section className="px-6 py-24 lg:py-28 bg-white shadow-sm border-y border-navy/10">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-[1fr_2fr] gap-12 lg:gap-20 mb-20">
+            <aside className="lg:sticky lg:top-28 self-start">
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+                About Us
+              </span>
+              <h2 className="mt-3 font-display font-semibold text-3xl lg:text-4xl text-balance">
+                From a small reading group to a long-term commitment.
+              </h2>
+              <Link
+                to="/about"
+                className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-brand hover:gap-2 transition-all"
+              >
+                Read our full story <ArrowRight className="size-4" />
+              </Link>
+            </aside>
+            <div className="max-w-[68ch] text-navy/80 leading-relaxed text-[15.5px] lg:text-base space-y-5">
+              <p className="italic text-navy/70">
+                AI4Afghanistan began as a small effort to understand how fast AI was advancing, and
+                quickly became a long-term commitment to help close a widening AI capacity gap for
+                Afghan youth.
+              </p>
+              <p>
+                In autumn 2025, we set ourselves a goal: to read short books on AI and share key
+                takeaways in our online gatherings. What began as an after-hours routine became a lens
+                for seeing the world differently. The discussions moved from what AI was already changing
+                to what it could mean over the next decade. Then we reached the harder follow-up: who gets
+                to keep up, and who gets left behind?
+              </p>
+              <p>
+                For us, that question immediately pointed to Afghanistan. If AI-driven change benefits
+                societies with strong education and skills-building infrastructure, what happens where
+                access to AI learning is limited? We came to a clear conclusion: if Afghanistan is to
+                participate meaningfully in an AI-driven world, AI capacity needs to be built first.
+                That means students who can learn and apply AI responsibly, teachers who can guide them,
+                and support structures that connect learning to real opportunities.
+              </p>
+              <p>
+                With lasting impact in mind, we chose upper secondary schools (grades 10–12) as our
+                entry point. We structured our approach into three phases: preparation and partnership-building
+                in Germany, carefully scoped pilots in Afghanistan, and gradual expansion as conditions
+                and implementation capacity allow.
+              </p>
+            </div>
+          </div>
+
+          {/* Mission / Vision / Values Cards */}
+          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+            <div className="p-8 rounded-3xl bg-surface ring-1 ring-navy/10">
+              <div className="w-10 h-10 rounded-xl bg-brand-soft/60 flex items-center justify-center mb-5">
+                <BookOpen className="size-5 text-brand" />
+              </div>
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+                Our Mission
+              </span>
+              <p className="mt-4 font-display text-xl leading-snug text-balance">
+                We build AI capacity for Afghan students through tailored learning programs,
+                institutional cooperation, and access to global learning opportunities.
+              </p>
+            </div>
+            <div className="p-8 rounded-3xl bg-surface ring-1 ring-navy/10">
+              <div className="w-10 h-10 rounded-xl bg-brand-soft/60 flex items-center justify-center mb-5">
+                <Globe className="size-5 text-brand" />
+              </div>
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+                Our Vision
+              </span>
+              <p className="mt-4 font-display text-xl leading-snug text-balance">
+                A future where every Afghan student can learn and apply AI responsibly — defined by
+                fair access to AI learning, inclusion, and meaningful contribution to Afghanistan's
+                digital economy.
+              </p>
+            </div>
+            <div className="p-8 rounded-3xl bg-surface ring-1 ring-navy/10">
+              <div className="w-10 h-10 rounded-xl bg-brand-soft/60 flex items-center justify-center mb-5">
+                <Shield className="size-5 text-brand" />
+              </div>
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+                Our Values
+              </span>
+              <ul className="mt-4 space-y-4 text-navy/80">
+                <li>
+                  <strong className="text-ink">Responsible AI</strong> — We promote safe, transparent,
+                  and inclusive use of AI in Afghanistan.
+                </li>
+                <li>
+                  <strong className="text-ink">Inclusion</strong> — We prioritize girls and women,
+                  rural learners, and underserved communities.
+                </li>
+                <li>
+                  <strong className="text-ink">Innovation</strong> — We pursue student-led AI projects
+                  that address real challenges in Afghanistan.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* DARK MISSION BLOCK */}
       <section className="py-16 lg:py-24 px-6">
         <div className="max-w-7xl mx-auto">
@@ -196,16 +297,102 @@ function HomePage() {
           <div className="grid md:grid-cols-2 gap-8">
             <ProgramCard
               img={trainingImg}
-              alt="Notebook with handwritten code notes next to a tablet showing Python code"
+              alt="Afghan students in a Kabul classroom learning AI and Python fundamentals"
               title="Training & Capacity-Building"
               body="Structured AI literacy and foundational skills for grades 10–12, plus train-the-trainer support for teachers."
             />
             <ProgramCard
               img={mentorshipImg}
-              alt="Two people collaborating on data visualizations across two laptops"
+              alt="Afghan students collaborating on an AI project with data visualizations on laptops"
               title="Applied AI Projects & Innovation"
               body="Guided student-led projects on locally relevant challenges, with mentorship from global practitioners."
             />
+          </div>
+        </div>
+      </section>
+
+      {/* SUPPORT OUR MISSION SECTION */}
+      <section className="px-6 py-24 lg:py-28 bg-white shadow-sm border-y border-navy/10">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-[60ch] mx-auto mb-16">
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+              Support Our Mission
+            </span>
+            <h2 className="mt-4 font-display font-semibold text-3xl lg:text-5xl text-balance">
+              Every contribution moves a student forward.
+            </h2>
+            <p className="mt-6 text-navy/70 text-pretty leading-relaxed">
+              Your support means investing in Afghan students who build AI knowledge and practical
+              skills, teachers who guide them, and support structures that connect learning to real
+              opportunities.
+            </p>
+          </div>
+
+          {/* Impact amounts */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
+            {[
+              { amount: "€25", desc: "Provides AI learning materials for one student" },
+              { amount: "€50", desc: "Funds one week of programming training" },
+              { amount: "€100", desc: "Supports mentorship for one month" },
+              { amount: "€250", desc: "Sponsors a complete AI literacy course" },
+            ].map((item) => (
+              <div key={item.amount} className="p-6 rounded-2xl bg-surface ring-1 ring-navy/10 text-center">
+                <span className="font-display font-semibold text-2xl lg:text-3xl text-brand">{item.amount}</span>
+                <p className="mt-2 text-sm text-navy/70">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Three ways to support */}
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="p-8 rounded-3xl bg-surface ring-1 ring-navy/10 flex flex-col">
+              <div className="w-10 h-10 rounded-xl bg-brand-soft/60 flex items-center justify-center mb-5">
+                <Heart className="size-5 text-brand" />
+              </div>
+              <h3 className="font-display font-semibold text-xl mb-3">Make a Donation</h3>
+              <p className="text-navy/70 text-pretty mb-6 flex-1">
+                Fund learning materials, teacher training, and mentorship for Afghan students. One-time
+                or monthly — every euro counts.
+              </p>
+              <Link
+                to="/donate"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-brand hover:gap-2 transition-all"
+              >
+                Donate now <ArrowRight className="size-4" />
+              </Link>
+            </div>
+            <div className="p-8 rounded-3xl bg-brand text-white flex flex-col">
+              <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center mb-5">
+                <Users className="size-5 text-white" />
+              </div>
+              <h3 className="font-display font-semibold text-xl mb-3">Become a Volunteer</h3>
+              <p className="text-white/80 text-pretty mb-6 flex-1">
+                Join as a member and contribute through advisory support, program development,
+                operations, or resource mobilization.
+              </p>
+              <Link
+                to="/get-involved"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-white hover:gap-2 transition-all"
+              >
+                Apply to volunteer <ArrowRight className="size-4" />
+              </Link>
+            </div>
+            <div className="p-8 rounded-3xl bg-surface ring-1 ring-navy/10 flex flex-col">
+              <div className="w-10 h-10 rounded-xl bg-brand-soft/60 flex items-center justify-center mb-5">
+                <Lightbulb className="size-5 text-brand" />
+              </div>
+              <h3 className="font-display font-semibold text-xl mb-3">Partner With Us</h3>
+              <p className="text-navy/70 text-pretty mb-6 flex-1">
+                Education bodies, NGOs, and funding partners — let's build the foundations together
+                for responsible AI capacity in Afghanistan.
+              </p>
+              <Link
+                to="/partner-with-us"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-brand hover:gap-2 transition-all"
+              >
+                Start a conversation <ArrowRight className="size-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -230,7 +417,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* GET INVOLVED CTAs */}
+      {/* FINAL CTA CARDS */}
       <section className="px-6 py-24">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6">
           <CtaCard
