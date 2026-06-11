@@ -9,38 +9,296 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WorkRouteImport } from './routes/work'
+import { Route as PartnerWithUsRouteImport } from './routes/partner-with-us'
+import { Route as LegalRouteImport } from './routes/legal'
+import { Route as GetInvolvedRouteImport } from './routes/get-involved'
+import { Route as DonateRouteImport } from './routes/donate'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutIndexRouteImport } from './routes/about.index'
+import { Route as LegalPrivacyRouteImport } from './routes/legal.privacy'
+import { Route as LegalImprintRouteImport } from './routes/legal.imprint'
+import { Route as LegalDisclaimerRouteImport } from './routes/legal.disclaimer'
+import { Route as AboutTransparencyRouteImport } from './routes/about.transparency'
+import { Route as AboutTeamRouteImport } from './routes/about.team'
+import { Route as AboutPartnersRouteImport } from './routes/about.partners'
+import { Route as AboutDonorsRouteImport } from './routes/about.donors'
 
+const WorkRoute = WorkRouteImport.update({
+  id: '/work',
+  path: '/work',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartnerWithUsRoute = PartnerWithUsRouteImport.update({
+  id: '/partner-with-us',
+  path: '/partner-with-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalRoute = LegalRouteImport.update({
+  id: '/legal',
+  path: '/legal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GetInvolvedRoute = GetInvolvedRouteImport.update({
+  id: '/get-involved',
+  path: '/get-involved',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DonateRoute = DonateRouteImport.update({
+  id: '/donate',
+  path: '/donate',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutIndexRoute = AboutIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AboutRoute,
+} as any)
+const LegalPrivacyRoute = LegalPrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => LegalRoute,
+} as any)
+const LegalImprintRoute = LegalImprintRouteImport.update({
+  id: '/imprint',
+  path: '/imprint',
+  getParentRoute: () => LegalRoute,
+} as any)
+const LegalDisclaimerRoute = LegalDisclaimerRouteImport.update({
+  id: '/disclaimer',
+  path: '/disclaimer',
+  getParentRoute: () => LegalRoute,
+} as any)
+const AboutTransparencyRoute = AboutTransparencyRouteImport.update({
+  id: '/transparency',
+  path: '/transparency',
+  getParentRoute: () => AboutRoute,
+} as any)
+const AboutTeamRoute = AboutTeamRouteImport.update({
+  id: '/team',
+  path: '/team',
+  getParentRoute: () => AboutRoute,
+} as any)
+const AboutPartnersRoute = AboutPartnersRouteImport.update({
+  id: '/partners',
+  path: '/partners',
+  getParentRoute: () => AboutRoute,
+} as any)
+const AboutDonorsRoute = AboutDonorsRouteImport.update({
+  id: '/donors',
+  path: '/donors',
+  getParentRoute: () => AboutRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRouteWithChildren
+  '/blog': typeof BlogRoute
+  '/contact': typeof ContactRoute
+  '/donate': typeof DonateRoute
+  '/get-involved': typeof GetInvolvedRoute
+  '/legal': typeof LegalRouteWithChildren
+  '/partner-with-us': typeof PartnerWithUsRoute
+  '/work': typeof WorkRoute
+  '/about/donors': typeof AboutDonorsRoute
+  '/about/partners': typeof AboutPartnersRoute
+  '/about/team': typeof AboutTeamRoute
+  '/about/transparency': typeof AboutTransparencyRoute
+  '/legal/disclaimer': typeof LegalDisclaimerRoute
+  '/legal/imprint': typeof LegalImprintRoute
+  '/legal/privacy': typeof LegalPrivacyRoute
+  '/about/': typeof AboutIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
+  '/contact': typeof ContactRoute
+  '/donate': typeof DonateRoute
+  '/get-involved': typeof GetInvolvedRoute
+  '/legal': typeof LegalRouteWithChildren
+  '/partner-with-us': typeof PartnerWithUsRoute
+  '/work': typeof WorkRoute
+  '/about/donors': typeof AboutDonorsRoute
+  '/about/partners': typeof AboutPartnersRoute
+  '/about/team': typeof AboutTeamRoute
+  '/about/transparency': typeof AboutTransparencyRoute
+  '/legal/disclaimer': typeof LegalDisclaimerRoute
+  '/legal/imprint': typeof LegalImprintRoute
+  '/legal/privacy': typeof LegalPrivacyRoute
+  '/about': typeof AboutIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRouteWithChildren
+  '/blog': typeof BlogRoute
+  '/contact': typeof ContactRoute
+  '/donate': typeof DonateRoute
+  '/get-involved': typeof GetInvolvedRoute
+  '/legal': typeof LegalRouteWithChildren
+  '/partner-with-us': typeof PartnerWithUsRoute
+  '/work': typeof WorkRoute
+  '/about/donors': typeof AboutDonorsRoute
+  '/about/partners': typeof AboutPartnersRoute
+  '/about/team': typeof AboutTeamRoute
+  '/about/transparency': typeof AboutTransparencyRoute
+  '/legal/disclaimer': typeof LegalDisclaimerRoute
+  '/legal/imprint': typeof LegalImprintRoute
+  '/legal/privacy': typeof LegalPrivacyRoute
+  '/about/': typeof AboutIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/contact'
+    | '/donate'
+    | '/get-involved'
+    | '/legal'
+    | '/partner-with-us'
+    | '/work'
+    | '/about/donors'
+    | '/about/partners'
+    | '/about/team'
+    | '/about/transparency'
+    | '/legal/disclaimer'
+    | '/legal/imprint'
+    | '/legal/privacy'
+    | '/about/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/blog'
+    | '/contact'
+    | '/donate'
+    | '/get-involved'
+    | '/legal'
+    | '/partner-with-us'
+    | '/work'
+    | '/about/donors'
+    | '/about/partners'
+    | '/about/team'
+    | '/about/transparency'
+    | '/legal/disclaimer'
+    | '/legal/imprint'
+    | '/legal/privacy'
+    | '/about'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/contact'
+    | '/donate'
+    | '/get-involved'
+    | '/legal'
+    | '/partner-with-us'
+    | '/work'
+    | '/about/donors'
+    | '/about/partners'
+    | '/about/team'
+    | '/about/transparency'
+    | '/legal/disclaimer'
+    | '/legal/imprint'
+    | '/legal/privacy'
+    | '/about/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRouteWithChildren
+  BlogRoute: typeof BlogRoute
+  ContactRoute: typeof ContactRoute
+  DonateRoute: typeof DonateRoute
+  GetInvolvedRoute: typeof GetInvolvedRoute
+  LegalRoute: typeof LegalRouteWithChildren
+  PartnerWithUsRoute: typeof PartnerWithUsRoute
+  WorkRoute: typeof WorkRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/work': {
+      id: '/work'
+      path: '/work'
+      fullPath: '/work'
+      preLoaderRoute: typeof WorkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/partner-with-us': {
+      id: '/partner-with-us'
+      path: '/partner-with-us'
+      fullPath: '/partner-with-us'
+      preLoaderRoute: typeof PartnerWithUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal': {
+      id: '/legal'
+      path: '/legal'
+      fullPath: '/legal'
+      preLoaderRoute: typeof LegalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/get-involved': {
+      id: '/get-involved'
+      path: '/get-involved'
+      fullPath: '/get-involved'
+      preLoaderRoute: typeof GetInvolvedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/donate': {
+      id: '/donate'
+      path: '/donate'
+      fullPath: '/donate'
+      preLoaderRoute: typeof DonateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +306,107 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about/': {
+      id: '/about/'
+      path: '/'
+      fullPath: '/about/'
+      preLoaderRoute: typeof AboutIndexRouteImport
+      parentRoute: typeof AboutRoute
+    }
+    '/legal/privacy': {
+      id: '/legal/privacy'
+      path: '/privacy'
+      fullPath: '/legal/privacy'
+      preLoaderRoute: typeof LegalPrivacyRouteImport
+      parentRoute: typeof LegalRoute
+    }
+    '/legal/imprint': {
+      id: '/legal/imprint'
+      path: '/imprint'
+      fullPath: '/legal/imprint'
+      preLoaderRoute: typeof LegalImprintRouteImport
+      parentRoute: typeof LegalRoute
+    }
+    '/legal/disclaimer': {
+      id: '/legal/disclaimer'
+      path: '/disclaimer'
+      fullPath: '/legal/disclaimer'
+      preLoaderRoute: typeof LegalDisclaimerRouteImport
+      parentRoute: typeof LegalRoute
+    }
+    '/about/transparency': {
+      id: '/about/transparency'
+      path: '/transparency'
+      fullPath: '/about/transparency'
+      preLoaderRoute: typeof AboutTransparencyRouteImport
+      parentRoute: typeof AboutRoute
+    }
+    '/about/team': {
+      id: '/about/team'
+      path: '/team'
+      fullPath: '/about/team'
+      preLoaderRoute: typeof AboutTeamRouteImport
+      parentRoute: typeof AboutRoute
+    }
+    '/about/partners': {
+      id: '/about/partners'
+      path: '/partners'
+      fullPath: '/about/partners'
+      preLoaderRoute: typeof AboutPartnersRouteImport
+      parentRoute: typeof AboutRoute
+    }
+    '/about/donors': {
+      id: '/about/donors'
+      path: '/donors'
+      fullPath: '/about/donors'
+      preLoaderRoute: typeof AboutDonorsRouteImport
+      parentRoute: typeof AboutRoute
+    }
   }
 }
 
+interface AboutRouteChildren {
+  AboutDonorsRoute: typeof AboutDonorsRoute
+  AboutPartnersRoute: typeof AboutPartnersRoute
+  AboutTeamRoute: typeof AboutTeamRoute
+  AboutTransparencyRoute: typeof AboutTransparencyRoute
+  AboutIndexRoute: typeof AboutIndexRoute
+}
+
+const AboutRouteChildren: AboutRouteChildren = {
+  AboutDonorsRoute: AboutDonorsRoute,
+  AboutPartnersRoute: AboutPartnersRoute,
+  AboutTeamRoute: AboutTeamRoute,
+  AboutTransparencyRoute: AboutTransparencyRoute,
+  AboutIndexRoute: AboutIndexRoute,
+}
+
+const AboutRouteWithChildren = AboutRoute._addFileChildren(AboutRouteChildren)
+
+interface LegalRouteChildren {
+  LegalDisclaimerRoute: typeof LegalDisclaimerRoute
+  LegalImprintRoute: typeof LegalImprintRoute
+  LegalPrivacyRoute: typeof LegalPrivacyRoute
+}
+
+const LegalRouteChildren: LegalRouteChildren = {
+  LegalDisclaimerRoute: LegalDisclaimerRoute,
+  LegalImprintRoute: LegalImprintRoute,
+  LegalPrivacyRoute: LegalPrivacyRoute,
+}
+
+const LegalRouteWithChildren = LegalRoute._addFileChildren(LegalRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRouteWithChildren,
+  BlogRoute: BlogRoute,
+  ContactRoute: ContactRoute,
+  DonateRoute: DonateRoute,
+  GetInvolvedRoute: GetInvolvedRoute,
+  LegalRoute: LegalRouteWithChildren,
+  PartnerWithUsRoute: PartnerWithUsRoute,
+  WorkRoute: WorkRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

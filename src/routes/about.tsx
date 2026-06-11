@@ -1,13 +1,13 @@
 import { createFileRoute, Link, Outlet, useLocation } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 
-const SUB = [
+const SUB: ReadonlyArray<{ to: "/about" | "/about/team" | "/about/donors" | "/about/partners" | "/about/transparency"; label: string; exact?: boolean }> = [
   { to: "/about", label: "Story & Mission", exact: true },
   { to: "/about/team", label: "Our Team" },
   { to: "/about/donors", label: "Donors" },
   { to: "/about/partners", label: "Partners" },
   { to: "/about/transparency", label: "Transparency" },
-] as const;
+];
 
 export const Route = createFileRoute("/about")({
   head: () => ({
