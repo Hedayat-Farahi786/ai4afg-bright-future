@@ -39,7 +39,7 @@ function DonatePage() {
       <Section>
         <div className="grid lg:grid-cols-[3fr_2fr] gap-12 lg:gap-20">
           {/* Donation selector */}
-          <div className="bg-white shadow-sm rounded-3xl p-8 lg:p-10 ring-1 ring-navy/10">
+          <div className="min-w-0 bg-white shadow-sm rounded-3xl p-6 sm:p-8 lg:p-10 ring-1 ring-navy/10">
             <div className="inline-flex p-1 bg-white rounded-full ring-1 ring-navy/10 mb-8">
               <button
                 onClick={() => setTab("one")}
@@ -180,11 +180,11 @@ function BankDetails() {
         </div>
         <div>
           <dt className="text-white/60">IBAN</dt>
-          <dd className="mt-1 flex items-center gap-3">
-            <span className="font-mono">{iban}</span>
+          <dd className="mt-1 flex items-center gap-3 min-w-0">
+            <span className="font-mono text-xs sm:text-sm break-all min-w-0">{iban}</span>
             <button
               onClick={() => copy("iban", iban)}
-              className="p-1.5 rounded-md hover:bg-white/10"
+              className="p-1.5 rounded-md hover:bg-white/10 shrink-0"
               aria-label="Copy IBAN"
             >
               {copied === "iban" ? <Check className="size-4" /> : <Copy className="size-4" />}
