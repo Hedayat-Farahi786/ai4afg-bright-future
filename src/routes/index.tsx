@@ -656,3 +656,51 @@ function CtaCard({
     </div>
   );
 }
+
+function TeamGroup({
+  eyebrow,
+  title,
+  description,
+  people,
+}: {
+  eyebrow: string;
+  title: string;
+  description: string;
+  people: Person[];
+}) {
+  return (
+    <div className="grid lg:grid-cols-[1fr_2fr] gap-10 lg:gap-16 py-10 lg:py-14 border-t border-navy/10 first:border-t-0">
+      <div>
+        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+          {eyebrow}
+        </span>
+        <h3 className="mt-3 font-display font-semibold text-xl lg:text-2xl text-balance">
+          {title}
+        </h3>
+        <p className="mt-3 text-navy/70 max-w-[42ch] leading-relaxed text-sm">{description}</p>
+      </div>
+      <div className="grid sm:grid-cols-2 gap-3">
+        {people.map((p) => (
+          <div
+            key={p.name}
+            className="bg-surface ring-1 ring-navy/10 rounded-2xl p-4 flex items-center gap-3 transition hover:ring-brand/40 hover:-translate-y-0.5"
+          >
+            <div className="size-10 shrink-0 rounded-full bg-brand-soft/60 grid place-items-center text-brand font-display font-semibold text-sm">
+              {p.name
+                .split(" ")
+                .map((w) => w[0])
+                .filter((c) => /[A-Z]/.test(c))
+                .slice(0, 2)
+                .join("")}
+            </div>
+            <div className="min-w-0">
+              <div className="font-medium text-ink text-sm truncate">{p.name}</div>
+              <div className="text-xs text-navy/60 leading-snug">{p.role}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
