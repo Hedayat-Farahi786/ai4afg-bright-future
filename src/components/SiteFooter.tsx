@@ -61,6 +61,7 @@ export function SiteFooter() {
             <li><Link to="/get-involved" className="hover:text-white">Get Involved</Link></li>
             <li><Link to="/donate" className="hover:text-white">Donate</Link></li>
             <li><Link to="/partner-with-us" className="hover:text-white">Partner With Us</Link></li>
+            <li><Link to="/careers" className="hover:text-white">Careers</Link></li>
             <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
           </ul>
         </div>
