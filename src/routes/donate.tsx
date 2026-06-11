@@ -180,11 +180,11 @@ function BankDetails() {
         </div>
         <div>
           <dt className="text-white/60">IBAN</dt>
-          <dd className="mt-1 flex items-center gap-3">
-            <span className="font-mono">{iban}</span>
+          <dd className="mt-1 flex items-center gap-3 min-w-0">
+            <span className="font-mono text-xs sm:text-sm break-all min-w-0">{iban}</span>
             <button
               onClick={() => copy("iban", iban)}
-              className="p-1.5 rounded-md hover:bg-white/10"
+              className="p-1.5 rounded-md hover:bg-white/10 shrink-0"
               aria-label="Copy IBAN"
             >
               {copied === "iban" ? <Check className="size-4" /> : <Copy className="size-4" />}
