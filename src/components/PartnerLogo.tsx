@@ -46,27 +46,27 @@ export function PartnerLogo({ name }: { name: string }) {
 
   return (
     <figure
-      className="group relative flex flex-col items-center justify-center text-center py-8 sm:py-10 px-4 transition-all duration-300"
+      className="group relative flex flex-col items-center justify-center text-center py-10 sm:py-12 px-5 transition-colors duration-300 hover:bg-surface/40"
       title={v.label}
     >
-      <div className="flex h-20 sm:h-24 w-full items-center justify-center">
+      <div className="flex h-16 sm:h-20 w-full items-center justify-center">
         {v.src ? (
           <img
             src={v.src}
             alt={v.label}
             loading="lazy"
-            className="max-h-full max-w-[180px] sm:max-w-[200px] w-auto object-contain grayscale opacity-70 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-[1.04]"
+            className="max-h-full max-w-[160px] sm:max-w-[180px] w-auto object-contain transition-transform duration-300 group-hover:scale-[1.04]"
           />
         ) : (
           <div
-            className="grid h-16 w-16 place-items-center rounded-2xl font-bold text-xl text-white shadow-sm transition-transform duration-300 group-hover:scale-[1.04]"
+            className="grid h-14 w-14 place-items-center rounded-xl font-bold text-lg text-white shadow-sm transition-transform duration-300 group-hover:scale-[1.04]"
             style={{ background: v.accent }}
           >
             {v.initials}
           </div>
         )}
       </div>
-      <figcaption className="mt-4 text-[11px] uppercase tracking-[0.16em] font-semibold text-navy/50 transition-colors group-hover:text-navy">
+      <figcaption className="mt-5 text-[12px] sm:text-[13px] font-medium tracking-tight text-navy/70 transition-colors group-hover:text-navy line-clamp-2 max-w-[22ch]">
         {v.label}
       </figcaption>
     </figure>
