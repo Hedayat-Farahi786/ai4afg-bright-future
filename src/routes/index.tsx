@@ -82,10 +82,11 @@ function HomePage() {
 
               {/* Mobile headline: forced 3-line break, no orphans */}
               <h1 className="mt-4 sm:mt-5 font-display font-extrabold tracking-tight text-ink text-balance">
-                <span className="block lg:hidden text-[34px] leading-[1.05]">
+                <span className="block lg:hidden text-[32px] leading-[1.06]">
                   Empowering<br />
                   Afghan Youth<br />
-                  Through <span className="text-brand">AI Innovation</span>
+                  Through<br />
+                  <span className="text-brand">AI Innovation</span>
                 </span>
                 <span className="hidden lg:block text-5xl lg:text-7xl leading-[1.02] max-w-[20ch]">
                   Empowering Afghan Youth Through <span className="text-brand">AI Innovation</span>
