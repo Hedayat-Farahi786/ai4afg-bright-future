@@ -423,47 +423,45 @@ function HomePage() {
         </div>
       </section>
 
-      {/* DONORS & PARTNERS */}
-      <section className="px-6 py-24 lg:py-28">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-20">
-          <div>
-            <Reveal>
+      {/* DONORS & PARTNERS — logo wall */}
+      <section className="px-6 py-20 sm:py-24 lg:py-28 bg-gradient-to-b from-surface/40 to-white">
+        <div className="max-w-7xl mx-auto">
+          <Reveal>
+            <div className="text-center max-w-[60ch] mx-auto">
               <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
-                Our Donors
+                Donors & Partners
               </span>
-              <h2 className="mt-4 font-display font-semibold text-3xl text-balance">
-                Made possible by the generosity of our supporters.
+              <h2 className="mt-4 font-display font-semibold text-3xl sm:text-4xl text-balance">
+                Backed by leaders in education, development & innovation.
               </h2>
-              <p className="mt-4 text-navy/70 leading-relaxed max-w-[44ch]">
-                Profound gratitude to organizations and individuals funding AI capacity for Afghan
-                students. Relationships listed are placeholders to be confirmed.
+              <p className="mt-4 text-navy/70 leading-relaxed">
+                Profound gratitude to the organizations funding and partnering with us to bring
+                AI capacity to Afghan students.
               </p>
-            </Reveal>
-            <Reveal delay={80} className="mt-8 grid sm:grid-cols-2 gap-4">
+            </div>
+          </Reveal>
+
+          <Reveal delay={80} className="mt-14 sm:mt-16">
+            <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-navy/50 text-center mb-6">
+              Our Donors
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 divide-x divide-y divide-navy/10 border border-navy/10 rounded-2xl overflow-hidden bg-white">
               {DONORS.map((d) => (
                 <PartnerLogo key={d} name={d} />
               ))}
-            </Reveal>
-          </div>
-          <div>
-            <Reveal>
-              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
-                Institutional Partners
-              </span>
-              <h2 className="mt-4 font-display font-semibold text-3xl text-balance">
-                Building together with education and development partners.
-              </h2>
-              <p className="mt-4 text-navy/70 leading-relaxed max-w-[44ch]">
-                Education bodies, public schools, NGOs, international development agencies, and
-                civil society organizations. Listed partnerships are placeholders to be confirmed.
-              </p>
-            </Reveal>
-            <Reveal delay={80} className="mt-8 grid sm:grid-cols-2 gap-4">
+            </div>
+          </Reveal>
+
+          <Reveal delay={120} className="mt-14 sm:mt-16">
+            <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-navy/50 text-center mb-6">
+              Institutional Partners
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 divide-x divide-y divide-navy/10 border border-navy/10 rounded-2xl overflow-hidden bg-white">
               {PARTNERS.map((p) => (
                 <PartnerLogo key={p} name={p} />
               ))}
-            </Reveal>
-          </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
