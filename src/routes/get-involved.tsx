@@ -1,7 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout, PageHero, Section } from "@/components/SiteLayout";
 import { toast } from "sonner";
+import { ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/get-involved")({
   head: () => ({
@@ -171,6 +172,37 @@ function GetInvolvedPage() {
               </button>
             </div>
           </form>
+        </div>
+      </Section>
+
+      <Section className="pt-0">
+        <div className="grid md:grid-cols-2 gap-6">
+          <Link
+            to="/partner-with-us"
+            className="group bg-white ring-1 ring-navy/10 rounded-3xl p-8 hover:ring-brand/40 hover:-translate-y-0.5 transition shadow-sm"
+          >
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">Partner With Us</span>
+            <h3 className="mt-3 font-display font-semibold text-2xl">Are you an organization?</h3>
+            <p className="mt-2 text-navy/70 leading-relaxed">
+              Education bodies, NGOs, foundations, and funding partners — explore a partnership.
+            </p>
+            <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-ink group-hover:text-brand">
+              Partnership inquiry <ArrowRight className="size-4" />
+            </span>
+          </Link>
+          <Link
+            to="/careers"
+            className="group bg-white ring-1 ring-navy/10 rounded-3xl p-8 hover:ring-brand/40 hover:-translate-y-0.5 transition shadow-sm"
+          >
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">Careers</span>
+            <h3 className="mt-3 font-display font-semibold text-2xl">Career opportunities.</h3>
+            <p className="mt-2 text-navy/70 leading-relaxed">
+              No open roles right now. Check back as our pilots in Afghanistan move forward.
+            </p>
+            <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-ink group-hover:text-brand">
+              View careers <ArrowRight className="size-4" />
+            </span>
+          </Link>
         </div>
       </Section>
       <style>{`
