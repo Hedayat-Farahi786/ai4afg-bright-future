@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WorkRouteImport } from './routes/work'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as PartnerWithUsRouteImport } from './routes/partner-with-us'
 import { Route as LegalRouteImport } from './routes/legal'
 import { Route as GetInvolvedRouteImport } from './routes/get-involved'
@@ -31,6 +32,11 @@ import { Route as AboutDonorsRouteImport } from './routes/about.donors'
 const WorkRoute = WorkRouteImport.update({
   id: '/work',
   path: '/work',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PartnerWithUsRoute = PartnerWithUsRouteImport.update({
@@ -129,6 +135,7 @@ export interface FileRoutesByFullPath {
   '/get-involved': typeof GetInvolvedRoute
   '/legal': typeof LegalRouteWithChildren
   '/partner-with-us': typeof PartnerWithUsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/work': typeof WorkRoute
   '/about/donors': typeof AboutDonorsRoute
   '/about/partners': typeof AboutPartnersRoute
@@ -148,6 +155,7 @@ export interface FileRoutesByTo {
   '/get-involved': typeof GetInvolvedRoute
   '/legal': typeof LegalRouteWithChildren
   '/partner-with-us': typeof PartnerWithUsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/work': typeof WorkRoute
   '/about/donors': typeof AboutDonorsRoute
   '/about/partners': typeof AboutPartnersRoute
@@ -169,6 +177,7 @@ export interface FileRoutesById {
   '/get-involved': typeof GetInvolvedRoute
   '/legal': typeof LegalRouteWithChildren
   '/partner-with-us': typeof PartnerWithUsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/work': typeof WorkRoute
   '/about/donors': typeof AboutDonorsRoute
   '/about/partners': typeof AboutPartnersRoute
@@ -191,6 +200,7 @@ export interface FileRouteTypes {
     | '/get-involved'
     | '/legal'
     | '/partner-with-us'
+    | '/sitemap.xml'
     | '/work'
     | '/about/donors'
     | '/about/partners'
@@ -210,6 +220,7 @@ export interface FileRouteTypes {
     | '/get-involved'
     | '/legal'
     | '/partner-with-us'
+    | '/sitemap.xml'
     | '/work'
     | '/about/donors'
     | '/about/partners'
@@ -230,6 +241,7 @@ export interface FileRouteTypes {
     | '/get-involved'
     | '/legal'
     | '/partner-with-us'
+    | '/sitemap.xml'
     | '/work'
     | '/about/donors'
     | '/about/partners'
@@ -251,6 +263,7 @@ export interface RootRouteChildren {
   GetInvolvedRoute: typeof GetInvolvedRoute
   LegalRoute: typeof LegalRouteWithChildren
   PartnerWithUsRoute: typeof PartnerWithUsRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   WorkRoute: typeof WorkRoute
 }
 
@@ -261,6 +274,13 @@ declare module '@tanstack/react-router' {
       path: '/work'
       fullPath: '/work'
       preLoaderRoute: typeof WorkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/partner-with-us': {
@@ -427,6 +447,7 @@ const rootRouteChildren: RootRouteChildren = {
   GetInvolvedRoute: GetInvolvedRoute,
   LegalRoute: LegalRouteWithChildren,
   PartnerWithUsRoute: PartnerWithUsRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   WorkRoute: WorkRoute,
 }
 export const routeTree = rootRouteImport
