@@ -1,0 +1,26 @@
+# AI4AFG
+
+> AI for Afghanistan — an NGO building a brighter future for Afghan communities through AI-powered programs, education, and partnerships.
+
+## Pages
+
+- [Home](/): Mission overview and featured programs.
+- [About](/about): Who we are and what we stand for.
+- [Our Team](/about/team): The people behind AI4AFG.
+- [Partners](/about/partners): Organizations we collaborate with.
+- [Donors](/about/donors): Donors supporting our mission.
+- [Transparency](/about/transparency): Financials and accountability.
+- [Our Work](/work): Programs and initiatives.
+- [Get Involved](/get-involved): Ways to support and participate.
+- [Partner With Us](/partner-with-us): Partnership opportunities.
+- [Donate](/donate): Support our mission.
+- [Careers](/careers): Open roles and how to apply.
+- [Blog](/blog): Updates, stories, and insights.
+- [Contact](/contact): Get in touch.
+
+## Optional
+
+- [Legal](/legal): Legal information overview.
+- [Privacy](/legal/privacy): Privacy policy.
+- [Imprint](/legal/imprint): Imprint.
+- [Disclaimer](/legal/disclaimer): Disclaimer.
