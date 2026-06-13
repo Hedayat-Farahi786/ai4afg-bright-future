@@ -22,7 +22,6 @@ const SCIENTIFIC: Person[] = [
   { name: "Hosam Stanikzai", role: "Scientific Advisor" },
 ];
 const PROGRAM: Person[] = [
-  { name: "Hedayatullah Farahi", role: "Program Development Lead" },
   { name: "Mir Mazhar Kawyani", role: "Program Development Lead" },
   { name: "Muhammad Mustafa Halim", role: "Program Development Lead" },
   { name: "Waheedullah Hakim", role: "Program Development Lead" },
@@ -30,7 +29,6 @@ const PROGRAM: Person[] = [
 ];
 const OPS: Person[] = [
   { name: "Ehsanullah Farahi", role: "Head of Operations" },
-  { name: "Amanullah Farahi", role: "Head of Partnerships & Resource Mobilization" },
 ];
 const DONORS = ["Malala Fund", "Azizi Developments", "GIZ", "The World Bank"];
 const PARTNERS = [
