@@ -41,7 +41,6 @@ const PROGRAM: Person[] = [
 
 const OPS: Person[] = [
   { name: "Ehsanullah Farahi", role: "Head of Operations" },
-  { name: "Amanullah Farahi", role: "Head of Partnerships, Grants & Resource Mobilization" },
 ];
 
 function TeamGroup({
