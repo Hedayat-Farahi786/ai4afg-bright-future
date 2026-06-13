@@ -33,7 +33,6 @@ const SCIENTIFIC: Person[] = [
 ];
 
 const PROGRAM: Person[] = [
-  { name: "Hedayatullah Farahi", role: "Program Development Lead, Founding Member" },
   { name: "Mir Mazhar Kawyani", role: "Program Development Lead, Founding Member" },
   { name: "Muhammad Mustafa Halim", role: "Program Development Lead, Founding Member" },
   { name: "Waheedullah Hakim", role: "Program Development Lead, Founding Member" },
