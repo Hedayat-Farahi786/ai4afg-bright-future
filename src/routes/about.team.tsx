@@ -33,7 +33,6 @@ const SCIENTIFIC: Person[] = [
 ];
 
 const PROGRAM: Person[] = [
-  { name: "Hedayatullah Farahi", role: "Program Development Lead, Founding Member" },
   { name: "Mir Mazhar Kawyani", role: "Program Development Lead, Founding Member" },
   { name: "Muhammad Mustafa Halim", role: "Program Development Lead, Founding Member" },
   { name: "Waheedullah Hakim", role: "Program Development Lead, Founding Member" },
@@ -42,7 +41,6 @@ const PROGRAM: Person[] = [
 
 const OPS: Person[] = [
   { name: "Ehsanullah Farahi", role: "Head of Operations" },
-  { name: "Amanullah Farahi", role: "Head of Partnerships, Grants & Resource Mobilization" },
 ];
 
 function TeamGroup({
