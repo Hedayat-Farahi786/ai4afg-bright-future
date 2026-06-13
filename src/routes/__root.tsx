@@ -89,9 +89,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", type: "image/jpeg", sizes: "32x32", href: "/__l5e/assets-v1/887e8bdf-9a4c-4435-ba4c-a6d9c2dd02bb/ai4a-favicon-32.jpg" },
-      { rel: "icon", type: "image/jpeg", sizes: "192x192", href: "/__l5e/assets-v1/c8b18fd4-2a90-4aaa-b42f-536deaadaf40/ai4a-favicon-192.jpg" },
-      { rel: "apple-touch-icon", sizes: "180x180", href: "/__l5e/assets-v1/c8b18fd4-2a90-4aaa-b42f-536deaadaf40/ai4a-favicon-192.jpg" },
+      { rel: "icon", type: "image/jpeg", sizes: "32x32", href: "/cdn-assets/ai4a-favicon-32.jpg" },
+      { rel: "icon", type: "image/jpeg", sizes: "192x192", href: "/cdn-assets/ai4a-favicon-192.jpg" },
+      { rel: "apple-touch-icon", sizes: "180x180", href: "/cdn-assets/ai4a-favicon-192.jpg" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
